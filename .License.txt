@@ -1,0 +1,7 @@
+Copyright © 2025 TeraOnic
+
+This code is proprietary and confidential.
+
+You may not use, copy, modify, merge, publish, distribute, sublicense, or sell
+any part of this project or its associated files without explicit permission
+from the author.
