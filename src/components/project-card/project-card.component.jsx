@@ -1,0 +1,15 @@
+export default function ProjectCard({ title, picture, category }) {
+  return (
+    <div className="w-[394px] hover:shadow-[12px_22px_4px_rgba(0,0,0,0.25)] transition-all duration-300 rounded-[20px] group mr-12">
+      <img
+        src={picture}
+        alt="Service Image"
+        className="w-[394px] h-[394px] rounded-tl-[20px] rounded-tr-[20px] object-cover object-center"
+      />
+      <div className="bg-[#2C2C2C] text-[#ffffff] w-[394px] px-[26px] py-[28px] rounded-bl-[20px] rounded-br-[20px] group-hover:bg-[#007DDC] transition-all duration-300">
+        <p className="text-2xl mb-5 text-center">{title}</p>
+        <p className="text-[16px] text-center">{category}</p>
+      </div>
+    </div>
+  );
+}
