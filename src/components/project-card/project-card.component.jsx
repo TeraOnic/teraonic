@@ -1,6 +1,6 @@
 export default function ProjectCard({ title, picture, category }) {
   return (
-    <div className="w-[394px] hover:shadow-[12px_22px_4px_rgba(0,0,0,0.25)] transition-all duration-300 rounded-[20px] group">
+    <div className="w-[394px] hover:shadow-[12px_22px_4px_rgba(0,0,0,0.25)] transition-all duration-300 rounded-[20px] group mr-12">
       <img
         src={picture}
         alt="Service Image"
