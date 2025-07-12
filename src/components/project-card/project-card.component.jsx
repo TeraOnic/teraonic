@@ -7,7 +7,7 @@ export default function ProjectCard({ title, picture, category }) {
         className="w-[394px] h-[394px] rounded-tl-[20px] rounded-tr-[20px] object-cover object-center"
       />
       <div className="bg-[#2C2C2C] text-[#ffffff] w-[394px] px-[26px] py-[28px] rounded-bl-[20px] rounded-br-[20px] group-hover:bg-[#007DDC] transition-all duration-300">
-        <p className="text-2xl mb-5">{title}</p>
+        <p className="text-2xl mb-5 text-center">{title}</p>
         <p className="text-[16px] text-center">{category}</p>
       </div>
     </div>

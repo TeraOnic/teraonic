@@ -4,6 +4,8 @@ import WingsmenDepoImg from "../../assets/projects/WingsmenDepo.jpg";
 import Nasa from "../../assets/projects/Nasa.jpg";
 import Google from "../../assets/projects/Google.webp";
 import Facebook from "../../assets/projects/facebook.webp";
+import Blog from "../../assets/projects/optional.avif";
+import TradingApp from "../../assets/projects/optional2.webp";
 
 export default function Projects() {
   useEffect(() => {
@@ -14,14 +16,14 @@ export default function Projects() {
 
     const start = (e) => {
       isDown = true;
-      slider.classList.add("active");
+      slider.classList.add("dragging");
       startX = e.pageX - slider.offsetLeft;
       scrollLeft = slider.scrollLeft;
     };
 
     const stop = () => {
       isDown = false;
-      slider.classList.remove("active");
+      slider.classList.remove("dragging");
     };
 
     const move = (e) => {
@@ -48,16 +50,30 @@ export default function Projects() {
   return (
     <div className="mb-[70px]">
       <h1 className="text-[42px] text-center mb-[70px] w-full">Projects</h1>
+
       <div
-        className="flex overflow-x-auto gap-6 px-[124px] scroll-smooth hide-scrollbar cursor-grab active:cursor-grabbing"
         id="projects-scroll"
+        className="flex overflow-x-auto gap-6 px-[124px] scroll-smooth pb-6"
         style={{
-          scrollbarWidth: "none", // Firefox
-          msOverflowStyle: "none", // IE 10+
-          WebkitOverflowScrolling: "touch", // iOS smooth scroll
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          WebkitOverflowScrolling: "touch"
         }}
-        onWheel={(e) => (e.currentTarget.style.scrollbarWidth = "none")}
       >
+        <style>
+          {`
+            #projects-scroll {
+              cursor: default;
+            }
+            #projects-scroll::-webkit-scrollbar {
+              display: none;
+            }
+            #projects-scroll.dragging {
+              cursor: grabbing !important;
+            }
+          `}
+        </style>
+
         <ProjectCard
           title="Wingsmen Depo"
           picture={WingsmenDepoImg}
@@ -76,9 +92,20 @@ export default function Projects() {
         <ProjectCard
           title="Facebook"
           picture={Facebook}
+          category="App Development"
+        />
+        <ProjectCard
+          title="Blog Site"
+          picture={Blog}
+          category="Ui/Ux Design"
+        />
+        <ProjectCard
+          title="Trading Website"
+          picture={TradingApp}
           category="Website Development"
         />
       </div>
+
       <div className="w-full bg-[#007DDC] h-[308px] mt-[-216px]"></div>
     </div>
   );
