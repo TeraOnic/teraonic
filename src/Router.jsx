@@ -1,7 +1,7 @@
-import { Routes, Router } from "react-router";
+import { Routes, Route } from "react-router";
 import Home from "./routes/Home";
 
-export default function Router() {
+export default function AppRouter() {
   return (
     <Routes>
       <Route index element={<Home />} />
