@@ -1,8 +1,7 @@
 export default function NavigationBar() {
   return (
     <nav>
-      <div>LOGO</div>
-      <div>hello world</div>
+      <div>I am Navbar</div>
     </nav>
   );
 }
