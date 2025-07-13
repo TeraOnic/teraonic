@@ -1,7 +1,7 @@
 export default function NavigationBar() {
   return (
     <nav>
-      <div>I am Navbar</div>
+      <div className="font-poppins">I am Navbar</div>
     </nav>
   );
 }
