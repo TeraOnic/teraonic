@@ -2,11 +2,17 @@
 
 @font-face {
   font-family: Poppins;
-  src: url("/src/assets/fonts/Poppins/Poppins-Regular.ttf");
+  src: url("/src/assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: Jomhuria;
+  src: url("/src/assets/fonts/Jomhuria-Regular.ttf");
 }
 
 @theme {
   --font-poppins: Poppins;
+  --font-jomhuria: Jomhuria;
 
   --color-primary: #2c2c2c;
   --color-secondary: #007ddc;
