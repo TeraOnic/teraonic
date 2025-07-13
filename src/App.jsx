@@ -2,7 +2,7 @@ import Footer from "./components/footer/Footer.component";
 
 import "./App.css";
 import NavigationBar from "./components/naivgation-bar/NavigationBar.component";
-import AppRouter from "./router";
+import AppRouter from "./Router";
 import Services from "./components/services/Services.component";
 import Projects from "./components/projects/Projects.component";
 
