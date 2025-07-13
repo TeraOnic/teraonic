@@ -6,6 +6,7 @@ import Google from "../../assets/projects/Google.webp";
 import Facebook from "../../assets/projects/facebook.webp";
 import Blog from "../../assets/projects/optional.avif";
 import TradingApp from "../../assets/projects/optional2.webp";
+import SecondaryBtn from "../secondary-btn/SecondaryBtn.component.jsx";
 
 export default function Projects() {
   useEffect(() => {
@@ -106,7 +107,10 @@ export default function Projects() {
         />
       </div>
 
-      <div className="w-full bg-secondary h-72 mt-[-260px]"></div>
+      <div className="w-full bg-secondary h-72 mt-[-260px] mb-12"></div>
+      <div className="flex justify-center">
+      <SecondaryBtn text="Show All" />
+      </div>
     </div>
   );
 }
