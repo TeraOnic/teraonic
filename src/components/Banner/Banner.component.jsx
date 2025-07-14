@@ -2,7 +2,7 @@ import GridDesign from "../../assets/Banner/GridDesign.png";
 
 const Banner = () => {
   return (
-    <div className="w-full min-h-[980px] h-full bg-primary">
+    <div className="w-full min-h-[1960px] h-full bg-primary">
       <img
         src={GridDesign}
         alt="Banner Background"
