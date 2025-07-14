@@ -6,6 +6,7 @@ import Google from "../../assets/projects/Google.webp";
 import Facebook from "../../assets/projects/facebook.webp";
 import Blog from "../../assets/projects/optional.avif";
 import TradingApp from "../../assets/projects/optional2.webp";
+import SecondaryBtn from "../secondary-btn/SecondaryBtn.component.jsx";
 
 export default function Projects() {
   useEffect(() => {
@@ -48,12 +49,12 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="mb-[70px]">
-      <h1 className="text-[42px] text-center mb-[70px] w-full">Projects</h1>
+    <div className="mb-20">
+      <h1 className="text-lg text-center mb-20 font-poppins">Projects</h1>
 
       <div
         id="projects-scroll"
-        className="flex overflow-x-auto gap-6 px-[124px] scroll-smooth pb-6"
+        className="flex overflow-x-auto gap-6 px-32 scroll-smooth pb-6"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -106,7 +107,10 @@ export default function Projects() {
         />
       </div>
 
-      <div className="w-full bg-[#007DDC] h-[308px] mt-[-216px]"></div>
+      <div className="w-full bg-secondary h-72 mt-[-260px] mb-12"></div>
+      <div className="flex justify-center">
+      <SecondaryBtn text="Show All" />
+      </div>
     </div>
   );
 }
