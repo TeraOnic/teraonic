@@ -30,7 +30,7 @@ const Banner = () => {
   return (
     <div
       ref={bannerRef}
-      className="relative w-full h-[200vh] bg-primary overflow-hidden"
+      className="relative w-full h-[2160px] bg-primary overflow-hidden"
     >
       <motion.img
         src={GridDesign}
