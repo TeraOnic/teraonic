@@ -11,13 +11,17 @@ const Banner = () => {
   });
 
   const teraonicX = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
-  const teraonicY = useTransform(scrollYProgress, [0, 1], ["0%", "320%"]);
+  const teraonicY = useTransform(scrollYProgress, [0, 1], ["0%", "680%"]);
   const teraonicColor = useTransform(
     scrollYProgress,
     [0, 1],
     ["#494949", "#FFFFFF"],
   );
-  const teraonicScale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
+  const teraonicFontSize = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["120px", "80px"],
+  );
 
   const paragraphX = useTransform(scrollYProgress, [0, 1], ["0%", "-135%"]);
   const paragraphY = useTransform(scrollYProgress, [0, 1], ["0%", "240%"]);
@@ -38,15 +42,15 @@ const Banner = () => {
         className="w-full h-[594px] object-cover"
         style={{ y: imageY }}
       />
-      <div className="relative w-full mt-[-230px] text-[#494949]">
+      <div className="relative w-full mt-[-130px] text-[#494949]">
         <motion.p
           style={{
             x: teraonicX,
             y: teraonicY,
             color: teraonicColor,
-            scale: teraonicScale,
+            fontSize: teraonicFontSize,
           }}
-          className="font-jomhuria text-[240px] absolute left-[50%] translate-x-[-50%]"
+          className="font-poppins text-[120px] absolute left-[50%] translate-x-[-50%]"
         >
           TeraOnic
         </motion.p>
