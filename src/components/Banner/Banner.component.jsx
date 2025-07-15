@@ -1,6 +1,8 @@
 import GridDesign from "../../assets/Banner/GridDesign.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Glow, GlowCapture } from "@codaworks/react-glow";
+import "./Banner.css";
 
 const Banner = () => {
   const bannerRef = useRef(null);
@@ -11,7 +13,7 @@ const Banner = () => {
   });
 
   const teraonicX = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
-  const teraonicY = useTransform(scrollYProgress, [0, 1], ["0%", "680%"]);
+  const teraonicY = useTransform(scrollYProgress, [0, 1], ["0%", "1050%"]);
   const teraonicColor = useTransform(
     scrollYProgress,
     [0, 1],
@@ -52,7 +54,11 @@ const Banner = () => {
           }}
           className="font-poppins text-[120px] absolute left-[50%] translate-x-[-50%]"
         >
-          TeraOnic
+          <GlowCapture>
+            <Glow color={"#007ddc"}>
+              <p className="glowable-text mx-20">TeraOnic</p>
+            </Glow>
+          </GlowCapture>
         </motion.p>
         <motion.div
           style={{
