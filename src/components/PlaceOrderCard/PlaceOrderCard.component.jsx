@@ -5,32 +5,35 @@ import SecondaryBtn from "../secondary-btn/SecondaryBtn.component";
 const PlaceOrderCard = () => {
   return (
     <div
-      className="bg-primary rounded-b-[50px] w-full h-[561px] bg-no-repeat bg-right flex flex-col items-center justify-center "
+      className="bg-primary rounded-b-[50px] w-full h-auto min-h-[561px] bg-no-repeat bg-right flex flex-col justify-center items-center px-4 sm:px-6 lg:px-0"
       style={{ backgroundImage: `url(${PoBack})` }}
     >
-      <h2 className="text-white text-[35px] font-bold">Place Order</h2>
-      <div className="relative w-full h-[303px] bg-[#0094FF] flex items-center justify-between px-8 rounded-[24px] mt-4">
-        {/* Left Content */}
-        <div>
-          <h2 className="text-white text-[35px]  font-bold">
+      <h2 className="text-white text-[28px] sm:text-[32px] lg:text-[35px] font-bold text-center mt-8">
+        Place Order
+      </h2>
+      <div className="w-full sm:w-[90%] lg:w-[70%] rounded-4xl h-auto lg:h-[303px] bg-[#0094FF] mt-10 mx-auto flex flex-col lg:flex-row justify-between items-center overflow-hidden group p-6 lg:p-0">
+        <div className="mb-6 lg:my-[52px] mx-0 lg:mx-[60px] text-center lg:text-left">
+          <h2 className="text-white text-[24px] sm:text-[28px] lg:text-[35px] font-bold">
             Let’s bring your vision to life
           </h2>
-          <p className="text-sm text-white ">
+          <p className="text-sm text-white mt-6 sm:mt-8 mb-4 sm:mb-5">
             Schedule a free consultation with one of our experts — no
-            commitments, just a meaningful conversation about your goals.
+            commitments, just a meaningful <br />
+            conversation about your goals.
             <br />
             Let’s explore how we can turn your ideas into powerful digital
             solutions.
           </p>
-          <SecondaryBtn text="Contact Us" />
+          <button className="bg-primary text-secondary rounded-full w-[70%] sm:w-[50%] md:w-[40%] lg:w-[30%] h-[60px] sm:h-[72px] flex items-center justify-center text-sm font-semibold hover:text-m mx-auto lg:mx-0">
+            Contact Us
+          </button>
         </div>
 
-        {/* Right Background Illustration */}
-        <div>
+        <div className="w-full lg:w-auto lg:mr-[-20%] flex justify-center lg:justify-end">
           <img
             src={Group26}
             alt="Background Illustration"
-            className="absolute top-0 h-[303px] left-[80%] right-0 rounded-r-[24px]"
+            className="w-[70%] sm:w-[50%] md:w-[40%] lg:w-auto group-hover:transition-transform duration-300 ease-in-out group-hover:scale-125"
           />
         </div>
       </div>
