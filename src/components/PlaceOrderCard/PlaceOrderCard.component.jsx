@@ -24,12 +24,12 @@ const PlaceOrderCard = () => {
             Let’s explore how we can turn your ideas into powerful digital
             solutions.
           </p>
-          <button className="bg-primary text-secondary rounded-full w-[70%] sm:w-[50%] md:w-[40%] lg:w-[30%] h-[60px] sm:h-[72px] flex items-center justify-center text-sm font-semibold hover:text-m mx-auto lg:mx-0">
+          <button className="bg-primary text-secondary rounded-full w-[70%] sm:w-[50%] md:w-[40%] lg:w-[30%] h-[60px] sm:h-[72px] flex items-center justify-center text-sm font-semibold hover:bg-white mx-auto lg:mx-0">
             Contact Us
           </button>
         </div>
 
-        <div className="w-full lg:w-auto lg:mr-[-20%] flex justify-center lg:justify-end">
+        <div className="w-full lg:w-auto lg:mr-[-23%] flex justify-center lg:justify-end">
           <img
             src={Group26}
             alt="Background Illustration"
