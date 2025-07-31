@@ -1,7 +1,5 @@
 import PoBack from "../../assets/PlaceOrder/PoBack.png";
 import Group26 from "../../assets/PlaceOrder/Group26.png";
-import SecondaryBtn from "../secondary-btn/SecondaryBtn.component";
-import { div } from "framer-motion/client";
 
 const PlaceOrderCard = () => {
   return (
