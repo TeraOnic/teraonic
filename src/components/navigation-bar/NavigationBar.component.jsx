@@ -1,5 +1,5 @@
 import Logo from "../../assets/logo/Logo-TeraOnic.svg";
-import PrimaryBtn from "../primary-btn/PrimaryBtn.component";
+import SecondaryBtn from "../secondary-btn/SecondaryBtn.component";
 export default function NavigationBar() {
   return (
     <nav>
@@ -10,7 +10,7 @@ export default function NavigationBar() {
           <a href="">Our Projects</a>
           <a href="">About Us</a>
           <a href="">Contact Us</a>
-          <PrimaryBtn text="Get Started" />
+          <SecondaryBtn text="Get Started" />
         </div>
       </div>
     </nav>
