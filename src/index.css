@@ -10,9 +10,15 @@
   src: url("/src/assets/fonts/Jomhuria-Regular.ttf");
 }
 
+@font-face {
+  font-family: Nura;
+  src: url("/src/assets/fonts/Nura-SemiBold.ttf");
+}
+
 @theme {
   --font-poppins: Poppins;
   --font-jomhuria: Jomhuria;
+  --font-nura: Nura;
 
   --color-primary: #2c2c2c;
   --color-secondary: #007ddc;
