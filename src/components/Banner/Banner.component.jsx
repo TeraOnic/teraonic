@@ -8,7 +8,7 @@ import Linkedin from "../../assets/Banner/V-Linkedin.svg";
 
 const Header = () => {
   return (
-    <header className="mx-32 flex justify-between items-center my-40">
+    <section className="mx-32 flex justify-between items-center my-32">
       <div className="max-w-[39rem]">
         <div>
           <h1 className="font-nura text-6xl">TeraOnic</h1>
@@ -49,7 +49,7 @@ const Header = () => {
         <img src={Mail} alt="Mail" />
         <img src={Linkedin} alt="Linkedin" />
       </div>
-    </header>
+    </section>
   );
 };
 
