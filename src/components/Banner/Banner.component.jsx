@@ -1,86 +1,11 @@
-import GridDesign from "../../assets/Banner/GridDesign.png";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import { Glow, GlowCapture } from "@codaworks/react-glow";
-import "./Banner.css";
-
-const Banner = () => {
-  const bannerRef = useRef(null);
-
-  // Track scroll progress in this section
-  const { scrollYProgress } = useScroll({
-    target: bannerRef,
-  });
-
-  const teraonicX = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
-  const teraonicY = useTransform(scrollYProgress, [0, 1], ["0%", "1050%"]);
-  const teraonicColor = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["#494949", "#FFFFFF"],
-  );
-  const teraonicFontSize = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["120px", "80px"],
-  );
-
-  const paragraphX = useTransform(scrollYProgress, [0, 1], ["0%", "-135%"]);
-  const paragraphY = useTransform(scrollYProgress, [0, 1], ["0%", "240%"]);
-  const paragraphScale = useTransform(scrollYProgress, [0, 1], [1.5, 1]);
-
-  const paragraphOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "170%"]);
-
+import BusinessCard from '../business-card/business-card.component';
+const Header = () => {
   return (
-    <div
-      ref={bannerRef}
-      className="relative w-full h-[2160px] bg-primary overflow-hidden"
-    >
-      <motion.img
-        src={GridDesign}
-        alt="Banner Background"
-        className="w-full h-[594px] object-cover"
-        style={{ y: imageY }}
-      />
-      <div className="relative w-full mt-[-130px] text-[#494949]">
-        <motion.p
-          style={{
-            x: teraonicX,
-            y: teraonicY,
-            color: teraonicColor,
-            fontSize: teraonicFontSize,
-          }}
-          className="font-poppins text-[120px] absolute left-[50%] translate-x-[-50%]"
-        >
-          <GlowCapture>
-            <Glow color={"#007ddc"}>
-              <p className="glowable-text mx-20">TeraOnic</p>
-            </Glow>
-          </GlowCapture>
-        </motion.p>
-        <motion.div
-          style={{
-            x: paragraphX,
-            y: paragraphY,
-            scale: paragraphScale,
-            opacity: paragraphOpacity,
-          }}
-          className="text-[#C0C0C0] text-[24px] w-full max-w-[700px] px-4 absolute right-0 translate-x-[100%] top-[500px] text-left"
-        >
-          At TeraOnics, we build{" "}
-          <span className="text-blue-400">Custom Software</span> that’s
-          purpose-built for your unique challenges. From concept to deployment,
-          every solution is designed to perform — seamlessly, efficiently, and
-          reliably. We blend technical precision with clean design to create
-          systems that not only work, but work beautifully. Whether you're a
-          startup or an enterprise, we adapt to your goals and help you move
-          forward with confidence.
-        </motion.div>
-      </div>
-    </div>
-  );
-};
+    <header className="header">
+      <p>I am header</p>
+      <BusinessCard />
+    </header>
+    );
+}
 
-export default Banner;
+export default Header;
