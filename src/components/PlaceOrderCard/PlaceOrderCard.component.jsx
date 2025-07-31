@@ -11,7 +11,7 @@ const PlaceOrderCard = () => {
       <h2 className="text-white text-[28px] sm:text-[32px] lg:text-[35px] font-bold text-center mt-8">
         Place Order
       </h2>
-      <div className="w-full sm:w-[90%] lg:w-[70%] rounded-4xl h-auto lg:h-[303px] bg-[#0094FF] mt-10 mx-auto flex flex-col lg:flex-row justify-between items-center overflow-hidden group p-6 lg:p-0">
+      <div className="w-full sm:w-[90%] lg:w-[70%] rounded-4xl h-auto lg:h-[303px] bg-secondary mt-10 mx-auto flex flex-col lg:flex-row justify-between items-center overflow-hidden group p-6 lg:p-0">
         <div className="mb-6 lg:my-[52px] mx-0 lg:mx-[60px] text-center lg:text-left">
           <h2 className="text-white text-[24px] sm:text-[28px] lg:text-[35px] font-bold">
             Let’s bring your vision to life
@@ -24,7 +24,7 @@ const PlaceOrderCard = () => {
             Let’s explore how we can turn your ideas into powerful digital
             solutions.
           </p>
-          <button className="bg-primary text-secondary rounded-full w-[70%] sm:w-[50%] md:w-[40%] lg:w-[30%] h-[60px] sm:h-[72px] flex items-center justify-center text-sm font-semibold hover:bg-white mx-auto lg:mx-0">
+          <button className="bg-transparent border text-white p-4 rounded-[0.5rem] w-44 text-sm font-poppins hover:bg-white hover:text-black transition-all duration-300">
             Contact Us
           </button>
         </div>
