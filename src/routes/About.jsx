@@ -1,7 +1,12 @@
+import AboutUsIntro from "../components/about-us-intro/About-Us-Intro.component"
+import WhyUs from "../components/why-us/Why-Us.component"
+import Team from "../components/team/team.component"
 const About = () => {
     return (
         <>
-        <p>Hello Im about</p>
+        <AboutUsIntro />
+        <WhyUs />
+        <Team />
         </>
     )
 }
