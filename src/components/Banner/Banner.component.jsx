@@ -5,6 +5,8 @@ import Arrow from "../../assets/Banner/Arrow2.svg";
 import Whatsapp from "../../assets/Banner/V-Whatsapp.svg";
 import Mail from "../../assets/Banner/V-Mail.svg";
 import Linkedin from "../../assets/Banner/V-Linkedin.svg";
+import WhatsappHandle from "../handlers/whatsappHandle";
+import LocationHandle from "../handlers/locationHandle";
 
 const Header = () => {
   return (
@@ -22,8 +24,8 @@ const Header = () => {
         </div>
 
         <div className="my-6 flex gap-2.5 flex-row">
-          <PrimaryBtn text="Free Consultation" />
-          <SecondaryBtn text="Visit us" />
+          <PrimaryBtn onClick={WhatsappHandle} text="Free Consultation" />
+          <SecondaryBtn onClick={LocationHandle} text="Visit us" />
         </div>
 
         <div className="flex gap-4 text-m">

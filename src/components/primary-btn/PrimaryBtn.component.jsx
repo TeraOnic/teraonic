@@ -1,6 +1,6 @@
-export default function PrimaryBtn({ text }) {
+export default function PrimaryBtn({ text, onClick }) {
   return (
-    <button className="bg-secondary text-white p-4 rounded-[0.5rem] w-44 text-sm font-poppins hover:bg-primary transition-all duration-300">
+    <button onClick={onClick} className="bg-secondary text-white p-4 rounded-[0.5rem] w-44 text-sm font-poppins hover:bg-primary transition-all duration-300">
       {text}
     </button>
   );

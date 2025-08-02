@@ -1,5 +1,6 @@
 import PoBack from "../../assets/PlaceOrder/PoBack.png";
 import Group26 from "../../assets/PlaceOrder/Group26.png";
+import WhatsappHandle from "../handlers/whatsappHandle";
 
 const PlaceOrderCard = () => {
   return (
@@ -24,7 +25,7 @@ const PlaceOrderCard = () => {
               Let’s explore how we can turn your ideas into powerful digital
               solutions.
             </p>
-            <button className="bg-transparent border text-white p-4 rounded-[0.5rem] w-44 text-sm font-poppins hover:bg-white hover:text-black transition-all duration-300">
+            <button onClick={WhatsappHandle} className="bg-transparent border text-white p-4 rounded-[0.5rem] w-44 text-sm font-poppins hover:bg-white hover:text-black transition-all duration-300">
               Contact Us
             </button>
           </div>

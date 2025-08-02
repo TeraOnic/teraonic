@@ -13,6 +13,7 @@
     "@codaworks/react-glow": "^1.0.6",
     "@tailwindcss/vite": "^4.1.11",
     "framer-motion": "^12.23.5",
+    "nprogress": "^0.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.7.1",
