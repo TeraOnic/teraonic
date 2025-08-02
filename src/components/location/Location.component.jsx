@@ -17,7 +17,7 @@ const Location = () => {
             </div>
             <div className="flex gap-3 items-start">
                 <img className="pt-1" src={MailIcon} alt="" />
-                <p>+teraonic.info@gmail.com</p>
+                <p>teraonic.info@gmail.com</p>
             </div>
         </div>
         <div className="p-6 shadow-[0_0_4px_0_rgba(0,0,0,0.25)] w-full rounded-sm">
