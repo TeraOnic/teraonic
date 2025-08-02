@@ -33,3 +33,13 @@
   --radius-m: 24px;
   --radius-lg: 48px;
 }
+
+#nprogress .bar {
+  background: #007ddc; /* YouTube-like red */
+  height: 2px;
+  z-index: 9999;
+}
+
+#nprogress .peg {
+  /* box-shadow: 0 0 10px #007ddc, 0 0 5px #00345c; */
+}

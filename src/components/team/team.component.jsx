@@ -17,7 +17,7 @@ const Team = () => {
         <AsimCard />
         <AsadCard />
         <AhmedCard />
-       <UsmanCard />
+        <UsmanCard />
       </div>
     </section>
   );
