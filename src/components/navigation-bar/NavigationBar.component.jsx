@@ -10,7 +10,7 @@ export default function NavigationBar() {
           <Link to="/">Home</Link>
           <Link to="">Our Projects</Link>
           <Link to="/about">About Us</Link>
-          <Link to="">Contact Us</Link>
+          <Link to="/contact">Contact Us</Link>
           <SecondaryBtn text="Get Started" />
         </div>
       </div>
