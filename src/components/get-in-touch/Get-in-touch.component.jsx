@@ -3,6 +3,8 @@ import WhatsApp from "../../assets/contact-us/Whatsapp.svg";
 import Linkedin from "../../assets/contact-us/Linkedin.svg";
 import Mail from "../../assets/contact-us/Mail.svg";
 import WhatsappHandle from "../handlers/whatsappHandle";
+import LinkedinHandle from "../handlers/linkedinHandle";
+import MailHandle from "../handlers/mailHandle";
 const GetInTouch = () => {
 
   return (
@@ -22,11 +24,13 @@ const GetInTouch = () => {
           logo={Linkedin}
           heading={"Contact us on Linkedin"}
           btnTitle={"Send Message"}
+          onClick={LinkedinHandle}
         />
         <GetInTouchCard
           logo={Mail}
           heading={"Contact us on Mail"}
           btnTitle={"Send Mail"}
+          onClick={MailHandle}
         />
       </div>
     </article>

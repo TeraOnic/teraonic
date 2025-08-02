@@ -1,5 +1,6 @@
 import Logo from "../../assets/logo/Logo-TeraOnic.svg";
 import SecondaryBtn from "../secondary-btn/SecondaryBtn.component";
+import WhatsappHandle from "../handlers/whatsappHandle";
 import { Link } from "react-router-dom";
 export default function NavigationBar() {
   return (
@@ -11,7 +12,7 @@ export default function NavigationBar() {
           <Link to="">Our Projects</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact Us</Link>
-          <SecondaryBtn text="Get Started" />
+          <SecondaryBtn onClick={WhatsappHandle} text="Get Started" />
         </div>
       </div>
     </nav>
