@@ -9,7 +9,7 @@ export default function NavigationBar() {
         <img src={Logo} alt="" />
         <div className="flex gap-16 items-center text-sm mr-0.5">
           <Link to="/">Home</Link>
-          <Link to="">Our Projects</Link>
+          <Link to="/projects">Our Projects</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact Us</Link>
           <SecondaryBtn onClick={WhatsappHandle} text="Get Started" />
