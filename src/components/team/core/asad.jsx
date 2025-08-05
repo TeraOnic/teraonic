@@ -1,4 +1,4 @@
-import Asad from "../../../assets/team/Asad.jpg";
+import Asad from "../../../assets/team/Asad.webp";
 import Linkedin from "../../../assets/team/Linkedin.svg";
 import Facebook from "../../../assets/team/Facebook.svg";
 import Instagram from "../../../assets/team/Instagram.svg";

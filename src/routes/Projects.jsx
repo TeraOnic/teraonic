@@ -6,7 +6,7 @@ import Coffee from "../assets/projects/Coffee.webp";
 import AUTransport from "../assets/projects/AUTransport.webp";
 import AppSignup from "../assets/projects/AppSignup.webp";
 import ShoesStore from "../assets/projects/ShoesStore.webp";
-import FreshBerryUAE from "../assets/projects/ShoesStore.webp";
+import FreshBerryUAE from "../assets/projects/FreshBerryUAE.webp";
 import HealthCare from "../assets/projects/HealthCare.webp";
 import Newvative from "../assets/projects/Newvative.webp";
 import TShirtShop from "../assets/projects/TShirtShop.webp";

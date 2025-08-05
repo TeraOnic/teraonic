@@ -1,4 +1,4 @@
-import Asim from "../../../assets/team/Asim.png";
+import Asim from "../../../assets/team/Asim.webp";
 import Github from "../../../assets/team/Github.svg";
 import Linkedin from "../../../assets/team/Linkedin.svg";
 const AsimCard = () => {
