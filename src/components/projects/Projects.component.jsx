@@ -1,12 +1,18 @@
 import { useEffect } from "react";
 import ProjectCard from "../project-card/project-card.component.jsx";
-import WingsmenDepoImg from "../../assets/projects/WingsmenDepo.jpg";
-import Nasa from "../../assets/projects/Nasa.jpg";
-import Google from "../../assets/projects/Google.webp";
-import Facebook from "../../assets/projects/facebook.webp";
-import Blog from "../../assets/projects/optional.avif";
-import TradingApp from "../../assets/projects/optional2.webp";
 import SecondaryBtn from "../secondary-btn/SecondaryBtn.component.jsx";
+
+import WingManDepo from "../../assets/projects/WingManDepo.webp";
+import TeraOnicMockup from "../../assets/projects/TeraOnicMockup.webp";
+import AXEMockup from "../../assets/projects/AXE.webp";
+import Coffee from "../../assets/projects/Coffee.webp";
+import AUTransport from "../../assets/projects/AUTransport.webp";
+import AppSignup from "../../assets/projects/AppSignup.webp";
+import ShoesStore from "../../assets/projects/ShoesStore.webp";
+import FreshBerryUAE from "../../assets/projects/FreshBerryUAE.webp";
+import HealthCare from "../../assets/projects/HealthCare.webp";
+import Newvative from "../../assets/projects/Newvative.webp";
+import TShirtShop from "../../assets/projects/TShirtShop.webp";
 
 export default function Projects() {
   useEffect(() => {
@@ -58,7 +64,7 @@ export default function Projects() {
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
-          WebkitOverflowScrolling: "touch"
+          WebkitOverflowScrolling: "touch",
         }}
       >
         <style>
@@ -76,40 +82,65 @@ export default function Projects() {
         </style>
 
         <ProjectCard
-          title="Wingsmen Depo"
-          picture={WingsmenDepoImg}
-          category="Website Development"
+          picture={TeraOnicMockup}
+          title={"TeraOnic Website"}
+          category={"Web Development"}
         />
         <ProjectCard
-          title="Nasa"
-          picture={Nasa}
-          category="Website Development"
+          picture={WingManDepo}
+          title={"Fly Boys Depo"}
+          category={"Web Development"}
         />
         <ProjectCard
-          title="Google"
-          picture={Google}
-          category="Website Development"
+          picture={FreshBerryUAE}
+          title={"Fresh Berry UAE Web"}
+          category={"Ui/Ux Design"}
         />
         <ProjectCard
-          title="Facebook"
-          picture={Facebook}
-          category="App Development"
+          picture={HealthCare}
+          title={"HealthCare Web"}
+          category={"Ui/Ux Design"}
         />
         <ProjectCard
-          title="Blog Site"
-          picture={Blog}
-          category="Ui/Ux Design"
+          picture={Newvative}
+          title={"NewVative"}
+          category={"Ui/Ux Design"}
         />
         <ProjectCard
-          title="Trading Website"
-          picture={TradingApp}
-          category="Website Development"
+          picture={TShirtShop}
+          title={"T-Shirt Shop"}
+          category={"Ui/Ux Design"}
+        />
+        <ProjectCard
+          picture={AXEMockup}
+          title={"AXE Website Redesign"}
+          category={"Ui/Ux Design"}
+        />
+        <ProjectCard
+          picture={ShoesStore}
+          title={"Shoes Store"}
+          category={"Ui/Ux Design"}
+        />
+        <ProjectCard
+          picture={Coffee}
+          title={"Fly Boys Depo"}
+          category={"Ui/Ux Design"}
+        />
+        <ProjectCard
+          picture={AUTransport}
+          title={"AU Transport System App"}
+          category={"Ui/Ux Design"}
+        />
+        <ProjectCard
+          picture={AppSignup}
+          title={"App Signup Flow"}
+          category={"Ui/Ux Design"}
         />
       </div>
 
       <div className="w-full bg-secondary h-72 mt-[-260px] mb-12"></div>
       <div className="flex justify-center">
-      <SecondaryBtn text="Show All" />
+        <SecondaryBtn text="Show All" />
       </div>
     </div>
   );

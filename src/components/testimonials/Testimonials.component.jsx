@@ -1,7 +1,7 @@
 import TestimonialBox from "./core/Testimonial-box.component";
-import Talha from "../../assets/testimonials/talha.jpeg";
-import Sohail from "../../assets/testimonials/sohail.jpeg";
-import Blank from "../../assets/testimonials/blank.png";
+import Talha from "../../assets/testimonials/talha.webp";
+import Sohail from "../../assets/testimonials/sohail.webp";
+import Blank from "../../assets/testimonials/blank.webp";
 
 const Testimonials = () => {
   return (

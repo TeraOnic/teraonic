@@ -1,10 +1,10 @@
 import ServicesCard from "../services-card/ServicesCard.component";
-import WebDevImg from "../../assets/services/4.png";
-import MobDevImg from "../../assets/services/5.png";
-import AiServImg from "../../assets/services/6.png";
-import QAImg from "../../assets/services/9.jpg";
-import UiUxImg from "../../assets/services/7.png";
-import GDImg from "../../assets/services/8.png";
+import WebDevImg from "../../assets/services/4.webp";
+import MobDevImg from "../../assets/services/5.webp";
+import AiServImg from "../../assets/services/6.webp";
+import QAImg from "../../assets/services/9.webp";
+import UiUxImg from "../../assets/services/7.webp";
+import GDImg from "../../assets/services/8.webp";
 
 export default function Services() {
   return (

@@ -3,7 +3,7 @@ import Facebook from "../../../assets/team/Facebook.svg";
 import Instagram from "../../../assets/team/Instagram.svg";
 import Github from "../../../assets/team/Github.svg";
 import Dribble from "../../../assets/team/Dribble.svg";
-import Taqi from "../../../assets/team/Taqi.jpeg";
+import Taqi from "../../../assets/team/Taqi.webp";
 const TaqiCard = () => {
   return (
     <div className="w-72 pb-8 rounded-m bg-white shadow-[0_0_4px_0_rgba(0,0,0,0.25)] flex flex-col items-center">

@@ -1,4 +1,4 @@
-import WebDevImg from "../../assets/services/4.png";
+import WebDevImg from "../../assets/services/4.webp";
 import Arrow from "../../assets/services/arrow.svg";
 export default function ServicesCard({ title, picture }) {
   return (

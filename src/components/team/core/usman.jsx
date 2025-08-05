@@ -2,7 +2,7 @@ import Linkedin from "../../../assets/team/Linkedin.svg";
 import Facebook from "../../../assets/team/Facebook.svg";
 import Instagram from "../../../assets/team/Instagram.svg";
 import Github from "../../../assets/team/Github.svg";
-import Usman from "../../../assets/team/Usman.jpg";
+import Usman from "../../../assets/team/Usman.webp";
 const UsmanCard = () => {
   return (
     <div className="w-72 pb-8 rounded-m bg-white shadow-[0_0_4px_0_rgba(0,0,0,0.25)] flex flex-col items-center">
