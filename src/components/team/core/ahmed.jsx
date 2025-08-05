@@ -1,5 +1,4 @@
-import Ahmed from "../../../assets/team/Ahmed.jpeg";
-import Usman from "../../../assets/team/Usman.jpg";
+import Ahmed from "../../../assets/team/Ahmed.webp";
 import Linkedin from "../../../assets/team/Linkedin.svg";
 import Facebook from "../../../assets/team/Facebook.svg";
 import Instagram from "../../../assets/team/Instagram.svg";

@@ -1,4 +1,4 @@
-import Asim from "../../../assets/team/Asim.png";
+import Asim from "../../../assets/team/Asim.webp";
 import Github from "../../../assets/team/Github.svg";
 import Linkedin from "../../../assets/team/Linkedin.svg";
 const AsimCard = () => {
@@ -11,7 +11,7 @@ const AsimCard = () => {
         className="size-28 rounded-full mt-[-3.5rem] object-cover object-top"
       />
       <h2 className="text-center text-m font-bold">Muhammad Asim</h2>
-      <h3 className="text-center text-sm mb-6">Software Engineer & QA</h3>
+      <h3 className="text-center text-sm mb-6">Snr. Software Engr & QA</h3>
       <div className="flex gap-3.5">
         <img src={Linkedin} alt="Linkedin" />
         <img src={Github} alt="Github" />

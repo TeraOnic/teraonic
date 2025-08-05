@@ -1,12 +1,12 @@
 import Box from "./core/box.component";
-import JS from "../../assets/tools-and-tech/JS.png";
-import React from "../../assets/tools-and-tech/React.png";
-import Node from "../../assets/tools-and-tech/Node.png";
-import Next from "../../assets/tools-and-tech/Next.png";
-import MySql from "../../assets/tools-and-tech/MySql.png";
-import MongoDB from "../../assets/tools-and-tech/MongoDB.png";
-import Django from "../../assets/tools-and-tech/Django.png";
-import Figma from "../../assets/tools-and-tech/Figma.png";
+import JS from "../../assets/tools-and-tech/JS.svg";
+import React from "../../assets/tools-and-tech/React.svg";
+import Node from "../../assets/tools-and-tech/Node.svg";
+import Next from "../../assets/tools-and-tech/Next.svg";
+import MySql from "../../assets/tools-and-tech/MySql.svg";
+import MongoDB from "../../assets/tools-and-tech/MongoDB.svg";
+import Django from "../../assets/tools-and-tech/Django.svg";
+import Figma from "../../assets/tools-and-tech/Figma.svg";
 const ToolsAndTechnology = () => {
     return (
         <section className="mx-32 my-32">
