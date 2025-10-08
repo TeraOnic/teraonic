@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Banner />
-      {/* <ToolsAndTechnology /> */}
+      <ToolsAndTechnology />
       {/* <Services /> */}
       {/* <Projects /> */}
       {/* <Testimonials /> */}

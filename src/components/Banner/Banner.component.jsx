@@ -10,7 +10,7 @@ import LocationHandle from "../handlers/locationHandle";
 
 const Header = () => {
   return (
-    <section className="w-full max-w-[1690px] mx-auto md:px-8 px-4 flex flex-col md:flex-row justify-between items-center md:my-64 my-32">
+    <section className="w-full max-w-[1690px] mx-auto md:px-8 px-4 flex flex-col md:flex-row justify-between items-center md:mt-64 mt-32">
       <div className="max-w-[39rem] md:mb-0 mb-12">
         <div>
           <h1 className="font-nura md:text-6xl text-5xl">TeraOnic</h1>
