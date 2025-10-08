@@ -8,21 +8,24 @@ import MongoDB from "../../assets/tools-and-tech/MongoDB.svg";
 import Django from "../../assets/tools-and-tech/Django.svg";
 import Figma from "../../assets/tools-and-tech/Figma.svg";
 const ToolsAndTechnology = () => {
-    return (
-        <section className="mx-32 my-32">
-            <h2 className="text-3xl mb-6">Tools and technology</h2>
-            <div className="flex w-full justify-between flex-wrap gap-y-5">
-                <Box img={JS} alt={"Java Script"}/>
-                <Box img={React} alt={"React"}/>
-                <Box img={Node} alt={"Node"}/>
-                <Box img={Next} alt={"Next"}/>
-                <Box img={MySql} alt={"MySql"}/>
-                <Box img={MongoDB} alt={"MongoDB"}/>
-                <Box img={Django} alt={"Django"}/>
-                <Box img={Figma} alt={"Figma"}/>
-            </div>
-        </section>
-    )
-}
+  return (
+    <section className="w-full mx-auto max-w-[1690px] md:my-32 my-16 md:px-8 px-4">
+      <h2 className="text-3xl mb-6 max-sm:text-center">
+        Tools and Technologies
+      </h2>
+      <div className="flex w-full justify-between flex-wrap gap-y-5 gap-x-5 md:px-5 max-sm:justify-center">
+        <Box img={JS} alt={"Java Script"} />
+        <Box img={React} alt={"React"} />
+        <Box img={Node} alt={"Node"} />
+        <Box img={Next} alt={"Next"} />
+        <Box img={MySql} alt={"MySql"} />
+        <Box img={MongoDB} alt={"MongoDB"} />
+        <Box img={Django} alt={"Django"} />
+        <Box img={Figma} alt={"Figma"} />
+      </div>
+    </section>
+  );
+};
 
 export default ToolsAndTechnology;
+
