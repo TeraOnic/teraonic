@@ -10,7 +10,7 @@ export default function NavigationBar() {
       <div className="font-poppins flex justify-between py-4 px-4 w-full max-w-[1690px]">
         <img src={Logo} alt="" />
         <div className="gap-16 items-center text-sm mr-0.5 flex">
-          <div className="gap-16 bg-orange-500 md:flex hidden">
+          <div className="gap-16 md:flex hidden">
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "text-secondary" : "")}
@@ -36,8 +36,15 @@ export default function NavigationBar() {
               Contact Us
             </NavLink>
           </div>
-          <div>
+          <div className="flex gap-2">
             <SecondaryBtn onClick={WhatsappHandle} text="Get Started" />
+            <SecondaryBtn
+              onClick={() => {
+                console.log("Login clicked");
+              }}
+              text="X"
+              className="!px-2 md:hidden"
+            />
           </div>
         </div>
       </div>
