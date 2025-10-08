@@ -10,12 +10,12 @@ import LocationHandle from "../handlers/locationHandle";
 
 const Header = () => {
   return (
-    <section className="mx-32 flex justify-between items-center my-32">
-      <div className="max-w-[39rem]">
+    <section className="w-full max-w-[1690px] mx-auto md:px-8 px-4 flex flex-col md:flex-row justify-between items-center md:mt-64 mt-32">
+      <div className="max-w-[39rem] md:mb-0 mb-12">
         <div>
-          <h1 className="font-nura text-6xl">TeraOnic</h1>
-          <h2 className="text-4xl">From Code To Impact</h2>
-          <p className="text-sm">
+          <h1 className="font-nura md:text-6xl text-5xl">TeraOnic</h1>
+          <h2 className="md:text-4xl text-3xl">From Code To Impact</h2>
+          <p className="text-sm max-md:text-justify">
             TeraOnics builds custom software tailored to your business needs
             fast, reliable, and beautifully designed. From startups to
             enterprises, we turn complex challenges into seamless digital
@@ -25,10 +25,14 @@ const Header = () => {
 
         <div className="my-6 flex gap-2.5 flex-row">
           <PrimaryBtn onClick={WhatsappHandle} text="Free Consultation" />
-          <SecondaryBtn onClick={LocationHandle} text="Visit us" />
+          <SecondaryBtn
+            onClick={LocationHandle}
+            className="px-8 py-4"
+            text="Visit us"
+          />
         </div>
 
-        <div className="flex gap-4 text-m">
+        <div className="flex gap-4 md:text-m text-sm">
           <div>
             <h3 className="font-bold">AI</h3>
             <p>Services</p>
@@ -43,10 +47,10 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <BusinessCard />
-      <div className="flex gap-6 flex-col items-center">
-        <p className="rotate-90 mb-6">Get in touch </p>
-        <img src={Arrow} alt="Arrow" />
+      <BusinessCard className="" />
+      <div className="md:gap-6 md:flex-col flex-row items-center justify-between text-center flex w-full max-w-80 md:w-8 mx-4">
+        <p className="md:rotate-90 md:mb-6 whitespace-nowrap">Get in touch </p>
+        <img src={Arrow} alt="Arrow" className="md:rotate-0 rotate-270 mx-8" />
         <img src={Whatsapp} alt="Whatsapp" />
         <img src={Mail} alt="Mail" />
         <img src={Linkedin} alt="Linkedin" />
