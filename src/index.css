@@ -16,6 +16,8 @@
 }
 
 @theme {
+  --breakpoint-md: 965px;
+
   --font-poppins: Poppins;
   --font-jomhuria: Jomhuria;
   --font-nura: Nura;
