@@ -10,7 +10,9 @@ import Figma from "../../assets/tools-and-tech/Figma.svg";
 const ToolsAndTechnology = () => {
   return (
     <section className="w-full mx-auto max-w-[1690px] md:my-32 my-16 md:px-8 px-4">
-      <h2 className="text-3xl mb-6 max-sm:text-center">Tools and technology</h2>
+      <h2 className="text-3xl mb-6 max-sm:text-center">
+        Tools and Technologies
+      </h2>
       <div className="flex w-full justify-between flex-wrap gap-y-5 gap-x-5 md:px-5 max-sm:justify-center">
         <Box img={JS} alt={"Java Script"} />
         <Box img={React} alt={"React"} />
