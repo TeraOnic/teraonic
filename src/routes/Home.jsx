@@ -8,9 +8,9 @@ export default function Home() {
     <>
       <Banner />
       <ToolsAndTechnology />
-      {/* <Services /> */}
-      {/* <Projects /> */}
-      {/* <Testimonials /> */}
+      <Services />
+      <Projects />
+      <Testimonials />
     </>
   );
 }
