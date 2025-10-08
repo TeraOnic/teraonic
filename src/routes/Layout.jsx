@@ -7,9 +7,9 @@ export default function Layout() {
   return (
     <>
       <NavigationBar />
-      {/* <Outlet /> */}
-      {/* <PlaceOrderCard /> */}
-      {/* <Footer /> */}
+      <Outlet />
+      <PlaceOrderCard />
+      <Footer />
     </>
   );
 }

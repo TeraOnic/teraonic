@@ -1,7 +1,7 @@
 export default function Sidebar({ open, onClose }) {
   return (
     <div
-      className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-20 transition-transform duration-300 ${
+      className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-20 transition-transform duration-300 border-l border-gray-300 ${
         open ? "translate-x-0" : "translate-x-full"
       }`}
       style={{ willChange: "transform" }}
