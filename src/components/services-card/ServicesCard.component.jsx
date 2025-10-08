@@ -6,6 +6,7 @@ export default function ServicesCard({ title, picture }) {
       <img src={picture} alt="Service Image" className="w-96 h-96 rounded-tl-m rounded-tr-m object-cover object-center" />
       <div className="bg-primary text-white w-96 px-6 py-7 flex justify-between rounded-bl-m rounded-br-m text-m group-hover:bg-secondary transition-all duration-300">
         <p>{title}</p>
+        <p></p>
         <img src={Arrow} alt="Arrow icon" />
       </div>
     </div>
