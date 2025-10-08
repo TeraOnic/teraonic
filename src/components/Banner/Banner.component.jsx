@@ -10,7 +10,7 @@ import LocationHandle from "../handlers/locationHandle";
 
 const Header = () => {
   return (
-    <section className="w-full max-w-[1690px] mx-auto md:px-8 px-4 flex flex-col md:flex-row justify-between items-center my-32">
+    <section className="w-full max-w-[1690px] mx-auto md:px-8 px-4 flex flex-col md:flex-row justify-between items-center md:my-64 my-32">
       <div className="max-w-[39rem] md:mb-0 mb-12">
         <div>
           <h1 className="font-nura md:text-6xl text-5xl">TeraOnic</h1>
@@ -48,9 +48,9 @@ const Header = () => {
         </div>
       </div>
       <BusinessCard className="" />
-      <div className="gap-6 bg-orange-500 flex-col items-center hidden md:flex w-8">
-        <p className="rotate-90 mb-6 whitespace-nowrap">Get in touch </p>
-        <img src={Arrow} alt="Arrow" />
+      <div className="md:gap-6 md:flex-col flex-row items-center justify-between text-center flex w-full max-w-80 md:w-8 mx-4">
+        <p className="md:rotate-90 md:mb-6 whitespace-nowrap">Get in touch </p>
+        <img src={Arrow} alt="Arrow" className="md:rotate-0 rotate-270 mx-8" />
         <img src={Whatsapp} alt="Whatsapp" />
         <img src={Mail} alt="Mail" />
         <img src={Linkedin} alt="Linkedin" />
