@@ -8,8 +8,8 @@ export default function Layout() {
     <>
       <NavigationBar />
       <Outlet />
-      <PlaceOrderCard />
-      <Footer />
+      {/* <PlaceOrderCard /> */}
+      {/* <Footer /> */}
     </>
   );
 }

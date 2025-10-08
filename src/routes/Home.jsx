@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <ToolsAndTechnology />
-      <Services />
-      <Projects />
-      <Testimonials />
+      {/* <ToolsAndTechnology /> */}
+      {/* <Services /> */}
+      {/* <Projects /> */}
+      {/* <Testimonials /> */}
     </>
   );
 }
