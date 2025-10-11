@@ -1,5 +1,3 @@
-import WebDevImg from "../../assets/services/4.webp";
-import Arrow from "../../assets/services/arrow.svg";
 export default function ServicesCard({ title, picture, description }) {
   return (
     <div className="font-poppins w-64 bg-primary rounded-2xl py-6 px-3">
