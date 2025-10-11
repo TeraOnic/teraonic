@@ -15,7 +15,8 @@ export default function Projects() {
   return (
     <div className="my-20 px-32">
       <h1 className="text-center text-lg mb-12">Projects</h1>
-      <div className="flex flex-wrap gap-y-6 gap-x-14">
+      {/* flex flex-wrap gap-y-6 gap-x-14 */}
+      <div className="grid grid-cols-3 gap-y-20 justify-items-center">
         <ProjectCard
           picture={TeraOnicMockup}
           title={"TeraOnic Website"}

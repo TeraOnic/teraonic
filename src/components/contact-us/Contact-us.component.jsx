@@ -8,6 +8,9 @@ const ContactUs = () => {
       </p>
       <form className="flex flex-col gap-3 text-left border p-8 rounded-4xl text-[1rem]" action="https://formsubmit.co/teraonic.info@gmail.com" method="POST">
         <div className="flex gap-3">
+        <div className="w-full hidden">
+          <input name="Type" type="text" value="Contact Us" required/>
+        </div>
         <div className="w-full">
           <p>First Name</p>
           <input className="border w-full px-1.5 py-2.5" name="First Name" type="text" placeholder="Enter your First Name" required/>
