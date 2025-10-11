@@ -36,7 +36,7 @@ const PlaceOrderCard = () => {
           <img
             src={Group26}
             alt="Background Illustration"
-            className="absolute right-[-45%] xl:right-[-35%] 2xl:right-[-25%] max-lg:top-[-85%] opacity-50 lg:opacity-100 z-0 lg:w-auto group-hover:transition-transform duration-300 ease-in-out group-hover:scale-125"
+            className="absolute right-[-45%] xl:right-[-35%] 2xl:right-[-25%] max-lg:top-[-85%] max-sm:top-[-200px] opacity-70 lg:opacity-100 z-0 lg:w-auto group-hover:transition-transform duration-300 ease-in-out group-hover:scale-125"
           />
         </div>
       </div>
