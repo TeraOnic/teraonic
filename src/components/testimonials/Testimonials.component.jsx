@@ -7,24 +7,35 @@ import "swiper/css/pagination";
 import TestimonialBox from "./core/Testimonial-box.component";
 
 import testimonials from "./data/testimonials";
+import { useEffect, useState } from "react";
 
 const Testimonials = () => {
+  const [showNavigation, setShowNavigation] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setShowNavigation(window.innerWidth >= 850);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
   return (
-    <>
-      <h1 className="text-lg text-center mb-8 font-poppins">
+    <div className="max-w-[1690px] mx-auto">
+      <h1 className="text-lg text-center font-poppins mb-20">
         Client Testimonials
       </h1>
       <section className="w-full px-4 mb-20">
         <Swiper
           modules={[Navigation, Pagination]}
           slidesPerView={1}
-          navigation
+          navigation={showNavigation}
           pagination={{ clickable: true }}
           loop={true}
           style={{ width: "100%" }}
         >
           {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="mb-14 md:mb-20">
               <TestimonialBox
                 pic={testimonial.pic}
                 name={testimonial.name}
@@ -36,7 +47,7 @@ const Testimonials = () => {
           ))}
         </Swiper>
       </section>
-    </>
+    </div>
   );
 };
 export default Testimonials;
