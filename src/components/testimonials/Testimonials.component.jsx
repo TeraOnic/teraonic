@@ -32,6 +32,7 @@ const Testimonials = () => {
           navigation={showNavigation}
           pagination={{ clickable: true }}
           loop={true}
+          spaceBetween={100}
           style={{ width: "100%" }}
         >
           {testimonials.map((testimonial, index) => (
