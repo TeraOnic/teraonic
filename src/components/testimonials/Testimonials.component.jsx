@@ -1,5 +1,8 @@
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import TestimonialBox from "./core/Testimonial-box.component";
 
@@ -8,15 +11,17 @@ import testimonials from "./data/testimonials";
 const Testimonials = () => {
   return (
     <>
-      <h1 className="text-lg text-center mb-20 font-poppins">
+      <h1 className="text-lg text-center mb-8 font-poppins">
         Client Testimonials
       </h1>
-      <section className="mb-20 mx-32 flex justify-between">
+      <section className="w-full px-4 mb-20">
         <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          modules={[Navigation, Pagination]}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          loop={true}
+          style={{ width: "100%" }}
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
@@ -34,5 +39,4 @@ const Testimonials = () => {
     </>
   );
 };
-
 export default Testimonials;
