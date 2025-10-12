@@ -46,7 +46,7 @@ export default function NavigationBar() {
             <SecondaryBtn
               onClick={() => navigater("/contact")}
               text="Free Consultation"
-              className="px-4 py-2 md:px-8 md:py-4"
+              className="sm:px-4 px-2 py-2 md:px-8 md:py-4"
             />
             <SecondaryBtn
               text={<RxHamburgerMenu size={24} />}
