@@ -1,7 +1,6 @@
-
 const AboutUsIntro = () => {
   return (
-    <section className="mx-96 my-20 text-center max-[1240px]:mx-60 max-[1000px]:mx-40 max-[760px]:mx-20 max-[540px]:mx-10">
+    <section className="mx-96 my-20 mt-30 text-center max-[1240px]:mx-60 max-[1000px]:mx-40 max-[760px]:mx-20 max-[540px]:mx-10">
       <h1 className="text-lg mb-10 max-[540px]:text-3xl">Who Are We</h1>
       <p className="text-sm">
         At TeraOnic, we specialize in building custom software solutions

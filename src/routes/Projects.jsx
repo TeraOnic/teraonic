@@ -13,7 +13,7 @@ import TShirtShop from "../assets/projects/TShirtShop.webp";
 
 export default function Projects() {
   return (
-    <div className="my-20 px-32">
+    <div className="my-20 mt-30 px-32">
       <h1 className="text-center text-lg mb-12">Projects</h1>
       {/* flex flex-wrap gap-y-6 gap-x-14 */}
       <div className="grid grid-cols-3 gap-y-20 justify-items-center max-[2100px]:grid-cols-3 min-[2101px]:grid-cols-4 min-[2260px]:grid-cols-5 max-[1429px]:grid-cols-2 max-[1060px]:grid-cols-1">
