@@ -3,9 +3,9 @@ import CallIcon from "../../assets/contact-us/Call.svg"
 import MailIcon from "../../assets/contact-us/mail2.svg"
 const Location = () => {
   return (
-    <section className="flex mx-32 my-20 gap-6">
-      <div className="w-[50%]">
-        <div className="p-6 shadow-[0_0_4px_0_rgba(0,0,0,0.25)] w-full mb-6 rounded-sm flex flex-col gap-3">
+    <section className="flex mx-32 my-20 gap-6 max-[1200px]:flex-col max-[720px]:mx-16 max-[480px]:mx-5">
+      <div className="flex flex-col gap-6 w-full max-[1200px]:flex-row max-[900px]:flex-col">
+        <div className="p-6 shadow-[0_0_4px_0_rgba(0,0,0,0.25)] w-full rounded-sm flex flex-col gap-3">
             <h2 className="text-2xl">Office Address</h2>
             <div className="flex gap-3 items-start">
                 <img className="pt-1" src={LocationIcon} alt="" />
@@ -37,7 +37,7 @@ const Location = () => {
         </div>
       </div>
 
-      <div className="w-[50%] h-auto rounded-sm overflow-hidden">
+      <div className="w-full h-auto rounded-sm overflow-hidden max-[1200px]:h-96 max-[480px]:h-48">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.8018263653503!2d73.0248221!3d33.7140765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf789588f29b%3A0xa50edddb550336fe!2sTeraOnic%20Software%20Solutions!5e0!3m2!1sen!2s!4v1754134247620!5m2!1sen!2s"
           allowFullScreen=""
