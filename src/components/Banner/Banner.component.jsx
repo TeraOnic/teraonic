@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const navigater = useNavigate();
   return (
-    <section className="w-full max-w-[1690px] mx-auto md:px-20 px-4 flex flex-col md:flex-row justify-between items-center md:mt-64 mt-32">
+    <section className="w-full max-w-[1690px] mx-auto md:px-20 px-4 flex flex-col md:flex-row justify-between items-center md:mt-44 mt-32">
       <div className="max-w-[39rem] md:mb-0 mb-12">
         <div>
           <h1 className="font-nura md:text-6xl text-5xl">TeraOnic</h1>
