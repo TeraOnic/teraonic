@@ -13,7 +13,10 @@ const PlaceOrderCard = () => {
           Place Order
         </h2>
         <div className="w-full sm:w-[90%] lg:w-[70%] rounded-4xl h-auto lg:h-[303px] bg-secondary mt-10 mx-auto flex flex-row justify-between items-center overflow-hidden group p-6 lg:p-0 relative">
-          <div className="mb-6 lg:my-[52px] mx-0 lg:mx-[60px] text-center lg:text-left z-10">
+          <div
+            className="mb-6 lg:my-[52px] mx-0 lg:mx-[60px] text-center lg:text-left"
+            style={{ zIndex: 1 }}
+          >
             <h2 className="text-white text-[24px] sm:text-[28px] lg:text-[35px] font-bold">
               Let’s bring your vision to life
             </h2>
