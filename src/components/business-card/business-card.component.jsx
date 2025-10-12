@@ -1,6 +1,6 @@
 const BusinessCard = () => {
   return (
-    <div className="max-w-[39rem] bg-primary text-white md:w-[24.5rem] w-full rounded-2xl h-60 p-4 flex justify-between flex-col">
+    <div className="max-w-[450px] bg-primary text-white md:w-[24.5rem] w-full rounded-2xl h-60 p-4 flex justify-between flex-col">
       <div className="flex justify-between">
         <h2 className="text-secondary font-nura">TERAONIC</h2>
         <img src="/QRcode.png" alt="QR Code" />
