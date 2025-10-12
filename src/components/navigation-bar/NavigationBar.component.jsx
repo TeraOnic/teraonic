@@ -5,10 +5,11 @@ import Sidebar from "../sidebar/Sidebar.component";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function NavigationBar() {
+  const navigater = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -44,8 +45,9 @@ export default function NavigationBar() {
           </div>
           <div className="flex gap-2 justify-center items-center">
             <SecondaryBtn
-              onClick={WhatsappHandle}
-              text="Get Started"
+              // onClick={WhatsappHandle}
+              onClick={() => navigater("/contact")}
+              text="Free Consultation"
               className="px-4 py-2 md:px-8 md:py-4"
             />
             <SecondaryBtn
