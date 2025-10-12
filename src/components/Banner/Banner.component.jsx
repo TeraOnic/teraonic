@@ -5,14 +5,13 @@ import Arrow from "../../assets/Banner/Arrow2.svg";
 import Whatsapp from "../../assets/Banner/V-Whatsapp.svg";
 import Mail from "../../assets/Banner/V-Mail.svg";
 import Linkedin from "../../assets/Banner/V-Linkedin.svg";
-import WhatsappHandle from "../handlers/whatsappHandle";
 import LocationHandle from "../handlers/locationHandle";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigater = useNavigate();
   return (
-    <section className="w-full max-w-[1690px] mx-auto md:px-8 px-4 flex flex-col md:flex-row justify-between items-center md:mt-64 mt-32">
+    <section className="w-full max-w-[1690px] mx-auto md:px-20 px-4 flex flex-col md:flex-row justify-between items-center md:mt-64 mt-32">
       <div className="max-w-[39rem] md:mb-0 mb-12">
         <div>
           <h1 className="font-nura md:text-6xl text-5xl">TeraOnic</h1>
@@ -26,10 +25,9 @@ const Header = () => {
         </div>
 
         <div className="my-6 flex gap-2.5 flex-row">
-          <PrimaryBtn 
-          // onClick={WhatsappHandle} 
-          onClick={() => navigater("/contact")}
-          text="Free Consultation"
+          <PrimaryBtn
+            onClick={() => navigater("/contact")}
+            text="Free Consultation"
           />
           <SecondaryBtn
             onClick={LocationHandle}
@@ -57,13 +55,25 @@ const Header = () => {
       <div className="md:gap-6 md:flex-col flex-row items-center justify-between text-center flex w-full max-w-80 md:w-8 mx-4">
         <p className="md:rotate-90 md:mb-6 whitespace-nowrap">Get in touch </p>
         <img src={Arrow} alt="Arrow" className="md:rotate-0 rotate-270 mx-8" />
-        <a href="https://wa.me/923219747270" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://wa.me/923219747270"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={Whatsapp} alt="Whatsapp" />
         </a>
-        <a href="mailto:teraonic.info@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="mailto:teraonic.info@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={Mail} alt="Mail" />
         </a>
-        <a href="https://www.linkedin.com/company/teraonic-software-solutions/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/company/teraonic-software-solutions/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={Linkedin} alt="Linkedin" />
         </a>
       </div>

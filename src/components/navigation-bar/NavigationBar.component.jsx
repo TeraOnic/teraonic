@@ -14,7 +14,7 @@ export default function NavigationBar() {
 
   return (
     <nav className="w-full fixed top-0 left-0 bg-white border-b-gray-300 border-b z-10 flex justify-center">
-      <div className="font-poppins flex justify-between py-2 md:py-4 px-2 md:px-4  w-full max-w-[1690px]">
+      <div className="font-poppins flex justify-between py-2 md:py-4 lg:px-20 px-4  w-full max-w-[1690px]">
         <img src={Logo} alt="" className="max-md:w-30" />
         <div className="gap-16 items-center text-sm mr-0.5 flex">
           <div className="gap-16 md:flex hidden">
