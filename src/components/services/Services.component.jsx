@@ -7,7 +7,7 @@ import Automation from "../../assets/services/Automation.svg";
 
 export default function Services() {
   return (
-    <div className="max-w-[1690px] md:mx-10 mx-4 mb-20">
+    <div className="max-w-[1690px] px-4 mx-auto mb-20">
       <h1 className="text-lg text-center mb-20 font-poppins">Our Services</h1>
       <div className="flex flex-wrap md:gap-10 gap-5 justify-center">
         <ServicesCard

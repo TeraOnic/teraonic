@@ -1,6 +1,5 @@
 import Logo from "../../assets/logo/Logo-TeraOnic.svg";
 import SecondaryBtn from "../secondary-btn/SecondaryBtn.component";
-import WhatsappHandle from "../handlers/whatsappHandle";
 import Sidebar from "../sidebar/Sidebar.component";
 
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -14,7 +13,7 @@ export default function NavigationBar() {
 
   return (
     <nav className="w-full fixed top-0 left-0 bg-white border-b-gray-300 border-b z-10 flex justify-center">
-      <div className="font-poppins flex justify-between py-2 md:py-4 lg:px-20 px-4  w-full max-w-[1690px]">
+      <div className="font-poppins flex justify-between py-2 md:py-4 xl:px-20 lg:px-10 px-4  w-full max-w-[1690px]">
         <img src={Logo} alt="" className="max-md:w-30" />
         <div className="gap-16 items-center text-sm mr-0.5 flex">
           <div className="gap-16 md:flex hidden">
@@ -45,7 +44,6 @@ export default function NavigationBar() {
           </div>
           <div className="flex gap-2 justify-center items-center">
             <SecondaryBtn
-              // onClick={WhatsappHandle}
               onClick={() => navigater("/contact")}
               text="Free Consultation"
               className="px-4 py-2 md:px-8 md:py-4"
