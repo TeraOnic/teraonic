@@ -4,9 +4,9 @@ import Collaboration from "../../assets/why-us/Colaboration.svg";
 import Cost from "../../assets/why-us/Cost.svg";
 const WhyUs = () => {
   return (
-    <section className="mb-20 mx-32">
+    <section className="mb-20 mx-32 max-[1040px]:mx-20 max-[940px]:mx-10 max-[860px]:mx-4">
       <h1 className="text-lg mb-10 text-center">Why Choose TeraOnic</h1>
-      <div className="flex justify-between">
+      <div className="flex justify-between max-[520px]:flex-col max-[520px]:items-center max-[520px]:gap-10">
         <WhyUsCard
           logo={Verified}
           heading1={"Reliable"}
