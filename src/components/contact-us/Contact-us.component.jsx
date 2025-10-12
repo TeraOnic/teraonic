@@ -29,7 +29,7 @@ const ContactUs = () => {
   };
 
   return (
-    <article className="mx-80 my-20 text-center">
+    <article className="mx-80 my-20 text-center max-[1440px]:mx-60 max-[1200px]:mx-40 max-[1000px]:mx-20 max-[720px]:mx-5">
       <h1 className="text-lg">Contact Us</h1>
       <p className="text-sm mb-4">
         We'd love to hear from you. Get in touch with our team through any of
@@ -41,7 +41,7 @@ const ContactUs = () => {
         className="flex flex-col gap-3 text-left border p-8 rounded-4xl text-[1rem]"
       >
         <input type="hidden" name="Type" value="Contact Us" />
-        <div className="flex gap-3">
+        <div className="flex gap-3 max-[520px]:flex-col">
           <div className="w-full">
             <p>First Name</p>
             <input
