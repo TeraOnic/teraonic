@@ -1,6 +1,6 @@
 const BusinessCard = () => {
   return (
-    <div className="bg-primary text-white w-[24.5rem] rounded-2xl h-60 p-4 flex justify-between flex-col">
+    <div className="max-w-[450px] bg-primary text-white md:w-[24.5rem] w-full rounded-2xl h-60 p-4 flex justify-between flex-col">
       <div className="flex justify-between">
         <h2 className="text-secondary font-nura">TERAONIC</h2>
         <img src="/QRcode.png" alt="QR Code" />
@@ -9,14 +9,14 @@ const BusinessCard = () => {
         <p>From Code To Impact</p>
         <p>AI | Web & Mobile | UI/UX </p>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between gap-8">
         <div className="flex gap-2.5">
-            <img src="/gray-whatsapp.svg" alt="" />
-            <p className="text-xs text-[#AEAEAE]">+923219747270</p>
+          <img src="/gray-whatsapp.svg" alt="" />
+          <p className="text-xs text-[#AEAEAE]">+923219747270</p>
         </div>
-        <div className="flex gap-2.5">
-            <img src="/gray-mail.svg" alt="" />
-            <p className="text-xs text-[#AEAEAE]">teraonic.info@gmail.com</p>
+        <div className="flex gap-2.5 mr-4">
+          <img src="/gray-mail.svg" alt="" />
+          <p className="text-xs text-[#AEAEAE]">teraonic.info@gmail.com</p>
         </div>
       </div>
     </div>

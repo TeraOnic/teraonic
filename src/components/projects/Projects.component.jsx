@@ -140,7 +140,7 @@ export default function Projects() {
 
       <div className="w-full bg-secondary h-72 mt-[-260px] mb-12"></div>
       <div className="flex justify-center">
-        <SecondaryBtn text="Show All" />
+        <SecondaryBtn text="Show All" className="px-8 py-4" />
       </div>
     </div>
   );
