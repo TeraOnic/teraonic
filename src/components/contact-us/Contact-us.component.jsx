@@ -13,7 +13,7 @@ const ContactUs = () => {
         {
           method: "POST",
           body: formData,
-        }
+        },
       );
 
       if (response.ok) {
@@ -29,7 +29,7 @@ const ContactUs = () => {
   };
 
   return (
-    <article className="mx-80 my-20 text-center max-[1440px]:mx-60 max-[1200px]:mx-40 max-[1000px]:mx-20 max-[720px]:mx-5">
+    <article className="mx-80 my-20 mt-30 text-center max-[1440px]:mx-60 max-[1200px]:mx-40 max-[1000px]:mx-20 max-[720px]:mx-5">
       <h1 className="text-lg">Contact Us</h1>
       <p className="text-sm mb-4">
         We'd love to hear from you. Get in touch with our team through any of
