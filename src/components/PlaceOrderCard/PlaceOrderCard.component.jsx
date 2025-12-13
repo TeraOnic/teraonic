@@ -9,7 +9,7 @@ const PlaceOrderCard = () => {
         className="bg-primary rounded-b-[50px] w-full h-auto min-h-[561px] bg-no-repeat bg-right flex flex-col justify-center items-center px-4 sm:px-6 lg:px-0"
         style={{ backgroundImage: `url(${PoBack})` }}
       >
-        <h2 className="text-white text-[28px] sm:text-[32px] lg:text-[35px] font-bold text-center mt-8 ">
+        <h2 className="text-white font-nura text-[28px] sm:text-[32px] lg:text-[35px] font-bold text-center mt-8 ">
           Place Order
         </h2>
         <div className="w-full sm:w-[90%] lg:w-[70%] rounded-4xl h-auto lg:h-[303px] bg-secondary mt-10 mx-auto flex flex-row justify-between items-center overflow-hidden group p-6 lg:p-0 relative">
