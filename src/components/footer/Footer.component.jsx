@@ -26,6 +26,9 @@ export default function Footer() {
           </a>
         </div>
       </div>
+      <p className="text-gray-500 text-center text-xs pb-5">
+        Copyright © 2025 Teraonic. All Rights Reserved.
+      </p>
     </nav>
   );
 }

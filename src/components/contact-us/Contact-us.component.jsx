@@ -20,7 +20,7 @@ const ContactUs = () => {
         {
           method: "POST",
           body: formData,
-        }
+        },
       );
 
       if (response.ok) {
