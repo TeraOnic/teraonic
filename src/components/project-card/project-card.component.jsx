@@ -1,15 +1,36 @@
-export default function ProjectCard({ title, picture, category }) {
+import { motion } from "framer-motion";
+
+const ProjectCard = ({ picture, title, category }) => {
   return (
-    <div className="w-96 hover:shadow-[12px_22px_4px_rgba(0,0,0,0.25)] transition-all duration-300 rounded-m group mr-12 font-poppins">
-      <img
-        src={picture}
-        alt="Service Image"
-        className="w-96 h-96 rounded-tl-m rounded-tr-m object-cover object-center"
-      />
-      <div className="bg-primary text-white w-96 px-6 py-7 rounded-bl-m rounded-br-m group-hover:bg-secondary transition-all duration-300">
-        <p className="text-m mb-5 text-center">{title}</p>
-        <p className="text-sm text-center">{category}</p>
+    <motion.div
+      className="relative min-w-[320px] md:min-w-[450px] h-[400px] md:h-[500px] rounded-3xl overflow-hidden cursor-pointer group"
+      whileHover={{ y: -10 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
+      {/* Background Image with Zoom Effect */}
+      <div className="absolute inset-0 w-full h-full">
+        <motion.img
+          src={picture}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
       </div>
-    </div>
+
+      {/* Content */}
+      <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+        <span className="inline-block px-3 py-1 mb-3 text-xs font-medium tracking-wider text-white uppercase bg-primary/20 backdrop-blur-md rounded-full border border-white/10">
+          {category}
+        </span>
+        <h3 className="text-3xl font-bold text-white mb-2 leading-tight">
+          {title}
+        </h3>
+        <div className="w-0 group-hover:w-full h-0.5 bg-secondary transition-all duration-500 ease-in-out"></div>
+
+      </div>
+    </motion.div>
   );
-}
+};
+
+export default ProjectCard;

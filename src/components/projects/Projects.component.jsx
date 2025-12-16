@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { motion, useMotionValue, animate } from "framer-motion";
 import ProjectCard from "../project-card/project-card.component.jsx";
-import SecondaryBtn from "../secondary-btn/SecondaryBtn.component.jsx";
 
 import WingManDepo from "../../assets/projects/WingManDepo.webp";
 import TeraOnicMockup from "../../assets/projects/TeraOnicMockup.webp";
@@ -14,134 +14,100 @@ import HealthCare from "../../assets/projects/HealthCare.webp";
 import Newvative from "../../assets/projects/Newvative.webp";
 import TShirtShop from "../../assets/projects/TShirtShop.webp";
 
+const projectsData = [
+  { picture: TeraOnicMockup, title: "TeraOnic Website", category: "Web Development" },
+  { picture: WingManDepo, title: "Fly Boys Depo", category: "Web Development" },
+  { picture: FreshBerryUAE, title: "Fresh Berry UAE", category: "UI/UX Design" },
+  { picture: HealthCare, title: "HealthCare Web", category: "UI/UX Design" },
+  { picture: Newvative, title: "NewVative", category: "UI/UX Design" },
+  { picture: TShirtShop, title: "T-Shirt Shop", category: "UI/UX Design" },
+  { picture: AXEMockup, title: "AXE Website", category: "Re-Design" },
+  { picture: ShoesStore, title: "Shoes Store", category: "App Design" },
+  { picture: Coffee, title: "Coffee App", category: "Mobile App" },
+  { picture: AUTransport, title: "AU Transport", category: "System App" },
+  { picture: AppSignup, title: "App Signup Flow", category: "UI Component" },
+];
+
 export default function Projects() {
+  const carouselRef = useRef();
+  const [width, setWidth] = useState(0);
+  // Motion value for x-axis translation
+  const x = useMotionValue(0);
+
   useEffect(() => {
-    const slider = document.getElementById("projects-scroll");
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    const start = (e) => {
-      isDown = true;
-      slider.classList.add("dragging");
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
+    if (carouselRef.current) {
+      setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
+    }
+    const handleResize = () => {
+      if (carouselRef.current) {
+        setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
+      }
     };
-
-    const stop = () => {
-      isDown = false;
-      slider.classList.remove("dragging");
-    };
-
-    const move = (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 1.5; // drag speed multiplier
-      slider.scrollLeft = scrollLeft - walk;
-    };
-
-    slider.addEventListener("mousedown", start);
-    slider.addEventListener("mouseleave", stop);
-    slider.addEventListener("mouseup", stop);
-    slider.addEventListener("mousemove", move);
-
-    return () => {
-      slider.removeEventListener("mousedown", start);
-      slider.removeEventListener("mouseleave", stop);
-      slider.removeEventListener("mouseup", stop);
-      slider.removeEventListener("mousemove", move);
-    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const slideLeft = () => {
+    const currentX = x.get();
+    const newX = Math.min(currentX + 500, 0); // Move right (increase x), max 0
+    animate(x, newX, { duration: 0.5, ease: "easeOut" });
+  };
+
+  const slideRight = () => {
+    const currentX = x.get();
+    const newX = Math.max(currentX - 500, -width); // Move left (decrease x), min -width
+    animate(x, newX, { duration: 0.5, ease: "easeOut" });
+  };
+
   return (
-    <div className="mb-20">
-      <h1 className="text-lg text-center mb-20 font-poppins">Projects</h1>
+    <section className="mb-32 overflow-hidden relative">
+      <div className="max-w-[1690px] mx-auto px-4 md:px-8 mb-16 text-center">
+        <h1 className="text-4xl md:text-5xl font-nura text-primary mb-3">Featured Projects</h1>
+        <h2 className="text-gray-500 uppercase tracking-[0.2em] font-medium text-sm">Crafting Digital Experiences</h2>
 
-      <div
-        id="projects-scroll"
-        className="flex overflow-x-auto gap-6 px-32 scroll-smooth pb-6"
-        style={{
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-          WebkitOverflowScrolling: "touch",
-        }}
-      >
-        <style>
-          {`
-            #projects-scroll {
-              cursor: default;
-            }
-            #projects-scroll::-webkit-scrollbar {
-              display: none;
-            }
-            #projects-scroll.dragging {
-              cursor: grabbing !important;
-            }
-          `}
-        </style>
-
-        <ProjectCard
-          picture={TeraOnicMockup}
-          title={"TeraOnic Website"}
-          category={"Web Development"}
-        />
-        <ProjectCard
-          picture={WingManDepo}
-          title={"Fly Boys Depo"}
-          category={"Web Development"}
-        />
-        <ProjectCard
-          picture={FreshBerryUAE}
-          title={"Fresh Berry UAE Web"}
-          category={"Ui/Ux Design"}
-        />
-        <ProjectCard
-          picture={HealthCare}
-          title={"HealthCare Web"}
-          category={"Ui/Ux Design"}
-        />
-        <ProjectCard
-          picture={Newvative}
-          title={"NewVative"}
-          category={"Ui/Ux Design"}
-        />
-        <ProjectCard
-          picture={TShirtShop}
-          title={"T-Shirt Shop"}
-          category={"Ui/Ux Design"}
-        />
-        <ProjectCard
-          picture={AXEMockup}
-          title={"AXE Website Redesign"}
-          category={"Ui/Ux Design"}
-        />
-        <ProjectCard
-          picture={ShoesStore}
-          title={"Shoes Store"}
-          category={"Ui/Ux Design"}
-        />
-        <ProjectCard
-          picture={Coffee}
-          title={"Fly Boys Depo"}
-          category={"Ui/Ux Design"}
-        />
-        <ProjectCard
-          picture={AUTransport}
-          title={"AU Transport System App"}
-          category={"Ui/Ux Design"}
-        />
-        <ProjectCard
-          picture={AppSignup}
-          title={"App Signup Flow"}
-          category={"Ui/Ux Design"}
-        />
+        {/* Navigation Buttons */}
+        <div className="flex justify-center gap-4 mt-8">
+          <button
+            onClick={slideLeft}
+            className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button
+            onClick={slideRight}
+            className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <div className="w-full bg-secondary h-72 mt-[-260px] mb-12"></div>
-      <div className="flex justify-center">
-        <SecondaryBtn text="Show All" className="px-8 py-4" />
+      <div className="pl-4 md:pl-8 cursor-grab active:cursor-grabbing">
+        <motion.div
+          ref={carouselRef}
+          className="flex gap-8"
+          drag="x"
+          dragConstraints={{ right: 0, left: -width }}
+          style={{ x }}
+          whileTap={{ cursor: "grabbing" }}
+        >
+          {projectsData.map((project, index) => (
+            <ProjectCard
+              key={index}
+              picture={project.picture}
+              title={project.title}
+              category={project.category}
+            />
+          ))}
+        </motion.div>
       </div>
-    </div>
+
+      {/* Decorative Progress Bar Line */}
+      <div className="w-full h-[1px] bg-gray-100 mt-12 mx-auto max-w-[1690px]"></div>
+    </section>
   );
 }
