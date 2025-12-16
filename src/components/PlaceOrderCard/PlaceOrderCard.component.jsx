@@ -1,8 +1,10 @@
 import PoBack from "../../assets/PlaceOrder/PoBack.png";
 import Group26 from "../../assets/PlaceOrder/Group26.png";
-import WhatsappHandle from "../handlers/whatsappHandle";
+import { useNavigate } from "react-router-dom";
 
 const PlaceOrderCard = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[#D9D9D9]">
       <div
@@ -26,8 +28,8 @@ const PlaceOrderCard = () => {
               solutions.
             </p>
             <button
-              onClick={WhatsappHandle}
-              className="bg-transparent border text-white p-4 rounded-[0.5rem] w-44 text-sm font-poppins hover:bg-white hover:text-black transition-all duration-300"
+              onClick={() => navigate("/contact")}
+              className="bg-white border text-primary p-4 rounded-[0.5rem] w-44 text-sm font-poppins hover:bg-white hover:text-black transition-all duration-300"
             >
               Contact Us
             </button>

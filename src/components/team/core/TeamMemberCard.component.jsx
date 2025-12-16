@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const TeamMemberCard = ({ name, role, image }) => {
     return (
         <motion.div
-            className="relative w-[320px] h-[450px] rounded-[30px] overflow-hidden cursor-pointer group shadow-2xl"
+            className="relative w-[320px] max-w-full h-[450px] rounded-[30px] overflow-hidden cursor-pointer group shadow-2xl"
             whileHover={{ y: -12 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
         >

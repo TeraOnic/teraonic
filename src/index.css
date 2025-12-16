@@ -27,9 +27,9 @@
   --color-white: #ffffff;
   --color-black: #000000;
 
-  --text-sm: 1rem;
-  --text-m: 1.5rem;
-  --text-lg: 2.625rem;
+  --color-black: #000000;
+
+  --radius-sm: 6px;
 
   --radius-sm: 6px;
   --radius-m: 24px;

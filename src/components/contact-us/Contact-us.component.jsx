@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/motion";
-
-import WhatsApp from "../../assets/contact-us/Whatsapp.svg";
-import Linkedin from "../../assets/contact-us/Linkedin.svg";
-import Mail from "../../assets/contact-us/Mail.svg";
+import { LuMail, LuMessageCircle, LuLinkedin } from "react-icons/lu";
 
 import WhatsappHandle from "../handlers/whatsappHandle";
 import LinkedinHandle from "../handlers/linkedinHandle";
@@ -59,46 +56,49 @@ const ContactUs = () => {
             <div className="absolute bottom-10 left-10 w-32 h-32 bg-secondary/20 rounded-full blur-2xl"></div>
 
             <div className="relative z-10">
-              <h2 className="text-3xl font-nura mb-4">Let's Discuss Your Project</h2>
-              <p className="text-gray-300 mb-8 leading-relaxed">
+              <h2 className="text-2xl md:text-3xl font-nura mb-4 uppercase tracking-wide leading-tight">Let's Discuss Your <br /> Project</h2>
+              <p className="text-gray-400 mb-8 text-xs md:text-sm leading-relaxed max-w-sm">
                 Ready to take your digital presence to the next level? We are here to help you achieve your goals.
               </p>
 
               <div className="flex flex-col gap-6">
+                {/* Email Item */}
                 <div className="flex items-center gap-4 group cursor-pointer" onClick={MailHandle}>
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-secondary transition-colors duration-300">
-                    <img src={Mail} alt="Mail" className="w-6 h-6 invert" />
+                  <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-secondary/20 transition-all duration-300 border border-white/5 group-hover:border-secondary/50">
+                    <LuMail className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-widest">Email Us</p>
-                    <p className="font-medium group-hover:text-secondary transition-colors">teraonic.info@gmail.com</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mb-1 group-hover:text-secondary transition-colors">Email Us</p>
+                    <p className="font-semibold text-sm md:text-base text-white group-hover:text-secondary transition-colors">teraonic.info@gmail.com</p>
                   </div>
                 </div>
 
+                {/* WhatsApp Item */}
                 <div className="flex items-center gap-4 group cursor-pointer" onClick={WhatsappHandle}>
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-green-500 transition-colors duration-300">
-                    <img src={WhatsApp} alt="WhatsApp" className="w-6 h-6 invert" />
+                  <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-secondary/20 transition-all duration-300 border border-white/5 group-hover:border-secondary/50">
+                    <LuMessageCircle className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-widest">WhatsApp</p>
-                    <p className="font-medium group-hover:text-green-400 transition-colors">Chat with us</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mb-1 group-hover:text-secondary transition-colors">WhatsApp</p>
+                    <p className="font-semibold text-sm md:text-base text-white group-hover:text-secondary transition-colors">Chat with us</p>
                   </div>
                 </div>
 
+                {/* LinkedIn Item */}
                 <div className="flex items-center gap-4 group cursor-pointer" onClick={LinkedinHandle}>
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-[#0077b5] transition-colors duration-300">
-                    <img src={Linkedin} alt="Linkedin" className="w-6 h-6 invert" />
+                  <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-secondary/20 transition-all duration-300 border border-white/5 group-hover:border-secondary/50">
+                    <LuLinkedin className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-widest">LinkedIn</p>
-                    <p className="font-medium group-hover:text-[#0077b5] transition-colors">Connect with us</p>
+                    <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mb-1 group-hover:text-secondary transition-colors">LinkedIn</p>
+                    <p className="font-semibold text-sm md:text-base text-white group-hover:text-secondary transition-colors">Connect with us</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative z-10 mt-12">
-              <p className="text-xs text-center text-gray-500">© 2024 TeraOnic. All rights reserved.</p>
+            <div className="relative z-10 mt-12 md:mt-auto">
+              <p className="text-xs text-center md:text-left text-gray-600">© 2024 TeraOnic. All rights reserved.</p>
             </div>
           </div>
 

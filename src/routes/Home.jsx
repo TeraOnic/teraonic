@@ -5,6 +5,7 @@ import ToolsAndTechnology from "../components/tools-and-technology/Tools-and-tec
 import Testimonials from "../components/testimonials/Testimonials.component";
 import Stats from "../components/stats/Stats.component";
 import Process from "../components/process/Process.component";
+import WhyUs from "../components/why-us/Why-Us.component";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ToolsAndTechnology />
       <Services />
       <Process />
+      <WhyUs />
       <Projects />
       <Testimonials />
     </>

@@ -27,9 +27,7 @@ const ProjectCard = ({ picture, title, category }) => {
           {title}
         </h3>
         <div className="w-0 group-hover:w-full h-0.5 bg-secondary transition-all duration-500 ease-in-out"></div>
-        <p className="text-gray-300 text-sm mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-          Click to view case study &rarr;
-        </p>
+
       </div>
     </motion.div>
   );

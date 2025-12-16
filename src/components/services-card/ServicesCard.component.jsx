@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function ServicesCard({ title, picture, description }) {
+export default function ServicesCard({ title, icon: Icon, description }) {
   return (
     <motion.div
       whileHover={{ y: -10, scale: 1.02 }}
@@ -9,7 +9,7 @@ export default function ServicesCard({ title, picture, description }) {
       <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl -mr-16 -mt-16 transition-all duration-500 group-hover:bg-secondary/20"></div>
 
       <div className="bg-zinc-800 p-4 rounded-2xl group-hover:bg-zinc-700 transition-colors duration-300">
-        <img src={picture} alt="" className="w-8 h-8 object-contain" />
+        <Icon size={32} className="text-white group-hover:text-secondary transition-colors duration-300" />
       </div>
 
       <h3 className="text-xl font-bold text-white mt-2 group-hover:text-secondary transition-colors duration-300">
@@ -19,10 +19,6 @@ export default function ServicesCard({ title, picture, description }) {
       <p className="text-gray-400 text-sm leading-relaxed">
         {description}
       </p>
-
-      <div className="mt-2 text-secondary text-sm font-medium opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 flex items-center gap-2">
-        Learn more <span>→</span>
-      </div>
     </motion.div>
   );
 }

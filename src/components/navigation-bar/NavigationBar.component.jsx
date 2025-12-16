@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { LuPhone } from "react-icons/lu";
 import Logo from "../../assets/logo/Logo-TeraOnic.svg";
-import SecondaryBtn from "../secondary-btn/SecondaryBtn.component";
+import PrimaryBtn from "../primary-btn/PrimaryBtn.component";
 import Sidebar from "../sidebar/Sidebar.component";
 import { navLinkHover } from "../../utils/motion";
 
@@ -39,7 +40,7 @@ export default function NavigationBar() {
         />
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-12 items-center text-sm font-medium text-gray-600">
+        <div className="hidden lg:flex gap-12 items-center text-sm font-medium text-gray-600">
           {[
             { name: "Home", path: "/" },
             { name: "Our Projects", path: "/projects" },
@@ -73,15 +74,17 @@ export default function NavigationBar() {
 
         {/* Buttons */}
         <div className="flex gap-4 items-center">
-          <SecondaryBtn
-            onClick={() => navigate("/contact")}
-            text="Free Consultation"
-            className="hidden md:block px-6 py-2.5 !border-secondary !text-secondary hover:!bg-secondary hover:!text-white"
-          />
+          <div className="hidden lg:block">
+            <PrimaryBtn
+              onClick={() => navigate("/contact")}
+              text="Book a Call"
+              icon={LuPhone}
+            />
+          </div>
 
           <motion.div
             whileTap={{ scale: 0.9 }}
-            className="md:hidden p-2 rounded-full cursor-pointer hover:bg-gray-100/50"
+            className="lg:hidden p-2 rounded-full cursor-pointer hover:bg-gray-100/50"
             onClick={() => setSidebarOpen(true)}
           >
             <RxHamburgerMenu size={28} className="text-secondary" />

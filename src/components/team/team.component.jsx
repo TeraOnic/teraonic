@@ -2,19 +2,19 @@ import { motion } from "framer-motion";
 import TeamMemberCard from "./core/TeamMemberCard.component";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 
-import Taqi from "../../assets/team/Taqi.webp";
-import Asim from "../../assets/team/Asim.webp";
+import Taqi from "../../assets/team/MuhammadTaqi.webp";
+import Abdullah from "../../assets/team/MuhammadAbdullah.webp";
 
 const teamData = [
   {
     name: "Muhammad Taqi",
-    role: "Front-End Dev & UI/UX Designer",
+    role: "Software Engineer",
     image: Taqi,
   },
   {
-    name: "Muhammad Asim",
-    role: "Snr. Software Engr & QA",
-    image: Asim,
+    name: "Muhammad Abdullah",
+    role: "Software Engineer",
+    image: Abdullah,
   },
 ];
 
@@ -34,7 +34,7 @@ const Team = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
-        className="flex flex-col md:flex-row justify-center gap-10 md:gap-16 flex-wrap"
+        className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16 flex-wrap"
       >
         {teamData.map((member, index) => (
           <motion.div key={index} variants={fadeIn("up", index * 0.2)}>

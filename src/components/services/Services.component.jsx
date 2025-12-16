@@ -1,19 +1,14 @@
 import { motion } from "framer-motion";
 import ServicesCard from "../services-card/ServicesCard.component";
-import Web from "../../assets/services/Web.svg";
-import Mobile from "../../assets/services/Mobile.svg";
-import AI from "../../assets/services/AI.svg";
-import Design from "../../assets/services/Design.svg";
-import Automation from "../../assets/services/Automation.svg";
+import { LuMonitor, LuSmartphone, LuBot, LuMessageSquare } from "react-icons/lu";
 import { staggerContainer, fadeIn } from "../../utils/motion";
 
 export default function Services() {
   const servicesData = [
-    { title: "Web Dev", picture: Web, description: 'Building fast, responsive, and modern websites tailored to your needs.' },
-    { title: "App Dev", picture: Mobile, description: 'Cross-platform mobile applications that provide seamless user experiences.' },
-    { title: "AI Services", picture: AI, description: 'Intelligent solutions integrating machine learning to automate and optimize.' },
-    { title: "Ui/Ux", picture: Design, description: 'User-centric designs that are intuitive, accessible, and visually stunning.' },
-    { title: "Automation", picture: Automation, description: 'Streamlining business processes with custom automated workflows.' }
+    { title: "Web Development & Design", icon: LuMonitor, description: 'Building fast, responsive, and modern websites tailored to your needs.' },
+    { title: "App Development", icon: LuSmartphone, description: 'Cross-platform mobile applications that provide seamless user experiences.' },
+    { title: "AI Services", icon: LuBot, description: 'Intelligent solutions integrating machine learning to automate and optimize.' },
+    { title: "Consultation", icon: LuMessageSquare, description: 'Expert strategic guidance to help you navigate complex technical decisions and optimize your digital presence.' },
   ];
 
   return (
@@ -29,12 +24,12 @@ export default function Services() {
         <p className="text-gray-500 max-w-2xl mx-auto">Comprehensive digital solutions to propel your business forward.</p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
         {servicesData.map((service, index) => (
           <motion.div key={index} variants={fadeIn("up", index * 0.1)} className="w-full flex justify-center">
             <ServicesCard
               title={service.title}
-              picture={service.picture}
+              icon={service.icon}
               description={service.description}
             />
           </motion.div>
