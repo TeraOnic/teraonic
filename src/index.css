@@ -27,9 +27,9 @@
   --color-white: #ffffff;
   --color-black: #000000;
 
-  --text-sm: 1rem;
-  --text-m: 1.5rem;
-  --text-lg: 2.625rem;
+  --color-black: #000000;
+
+  --radius-sm: 6px;
 
   --radius-sm: 6px;
   --radius-m: 24px;
@@ -37,11 +37,44 @@
 }
 
 #nprogress .bar {
-  background: #007ddc; /* YouTube-like red */
+  background: #007ddc;
+  /* YouTube-like red */
   height: 2px;
   z-index: 9999;
 }
 
 #nprogress .peg {
   /* box-shadow: 0 0 10px #007ddc, 0 0 5px #00345c; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }

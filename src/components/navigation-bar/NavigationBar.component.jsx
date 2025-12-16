@@ -1,62 +1,98 @@
-import Logo from "../../assets/logo/Logo-TeraOnic.svg";
-import SecondaryBtn from "../secondary-btn/SecondaryBtn.component";
-import Sidebar from "../sidebar/Sidebar.component";
-
-import { RxHamburgerMenu } from "react-icons/rx";
-
+import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { LuPhone } from "react-icons/lu";
+import Logo from "../../assets/logo/Logo-TeraOnic.svg";
+import PrimaryBtn from "../primary-btn/PrimaryBtn.component";
+import Sidebar from "../sidebar/Sidebar.component";
+import { navLinkHover } from "../../utils/motion";
 
 export default function NavigationBar() {
-  const navigater = useNavigate();
+  const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="w-full fixed top-0 left-0 bg-white border-b-gray-300 border-b z-10 flex justify-center">
-      <div className="font-poppins flex justify-between py-2 md:py-4 xl:px-20 lg:px-10 px-4  w-full max-w-[1690px]">
-        <img src={Logo} alt="" className="max-md:w-30" />
-        <div className="gap-16 items-center text-sm mr-0.5 flex">
-          <div className="gap-16 md:flex hidden">
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+      className={`w-full fixed top-0 left-0 z-50 flex justify-center transition-all duration-300 ${scrolled ? "glass-panel border-b border-gray-100" : "bg-white/50 backdrop-blur-sm border-transparent"
+        }`}
+    >
+      <div className="font-poppins flex justify-between items-center py-3 md:py-4 px-4 md:px-8 w-full max-w-[1690px]">
+        {/* Logo */}
+        <motion.img
+          whileHover={{ scale: 1.05 }}
+          src={Logo}
+          alt="TeraOnic Logo"
+          className="w-32 md:w-40 cursor-pointer"
+          onClick={() => navigate("/")}
+        />
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex gap-12 items-center text-sm font-medium text-gray-600">
+          {[
+            { name: "Home", path: "/" },
+            { name: "Our Projects", path: "/projects" },
+            { name: "About Us", path: "/about" },
+            { name: "Contact Us", path: "/contact" }
+          ].map((item) => (
             <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "text-secondary" : "")}
+              key={item.name}
+              to={item.path}
+              className={({ isActive }) =>
+                `relative group transition-colors duration-300 ${isActive ? "text-secondary font-semibold" : "hover:text-secondary"}`
+              }
             >
-              Home
+              {({ isActive }) => (
+                <>
+                  <motion.span variants={navLinkHover} whileHover="hover">
+                    {item.name}
+                  </motion.span>
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeNav"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-secondary rounded-full"
+                    />
+                  )}
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
+                </>
+              )}
             </NavLink>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) => (isActive ? "text-secondary" : "")}
-            >
-              Our Projects
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? "text-secondary" : "")}
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => (isActive ? "text-secondary" : "")}
-            >
-              Contact Us
-            </NavLink>
-          </div>
-          <div className="flex gap-2 justify-center items-center">
-            <SecondaryBtn
-              onClick={() => navigater("/contact")}
-              text="Free Consultation"
-              className="sm:px-4 px-2 py-2 md:px-8 md:py-4"
+          ))}
+        </div>
+
+        {/* Buttons */}
+        <div className="flex gap-4 items-center">
+          <div className="hidden lg:block">
+            <PrimaryBtn
+              onClick={() => navigate("/contact")}
+              text="Book a Call"
+              icon={LuPhone}
             />
-            <SecondaryBtn
-              text={<RxHamburgerMenu size={24} />}
-              className="px-4 py-2 md:hidden active:bg-black active:text-white"
-              onClick={() => setSidebarOpen(true)}
-            />
-            <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
           </div>
+
+          <motion.div
+            whileTap={{ scale: 0.9 }}
+            className="lg:hidden p-2 rounded-full cursor-pointer hover:bg-gray-100/50"
+            onClick={() => setSidebarOpen(true)}
+          >
+            <RxHamburgerMenu size={28} className="text-secondary" />
+          </motion.div>
+
+          <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
