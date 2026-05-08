@@ -4,6 +4,7 @@ import { fadeIn, staggerContainer } from "../../utils/motion";
 
 import Taqi from "../../assets/team/MuhammadTaqi.webp";
 import Sharjeel from "../../assets/team/MuhammdSharjeel.jpeg";
+import AliMustafa from "../../assets/team/Ali Mustafa.jpg";
 
 const teamData = [
   {
@@ -15,6 +16,11 @@ const teamData = [
     name: "Muhammad Sharjeel",
     role: "Co-Founder, CMO and CFO",
     image: Sharjeel,
+  },
+  {
+    name: "Ali Mustafa",
+    role: "CTO",
+    image: AliMustafa,
   },
 ];
 
