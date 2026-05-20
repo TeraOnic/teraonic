@@ -3,18 +3,24 @@ import TeamMemberCard from "./core/TeamMemberCard.component";
 import { fadeIn, staggerContainer } from "../../utils/motion";
 
 import Taqi from "../../assets/team/MuhammadTaqi.webp";
-import Abdullah from "../../assets/team/MuhammadAbdullah.webp";
+import Sharjeel from "../../assets/team/MuhammdSharjeel.jpeg";
+import AliMustafa from "../../assets/team/AliMustafa.jpg";
 
 const teamData = [
   {
     name: "Muhammad Taqi",
-    role: "Software Engineer",
+    role: "Founder and CEO",
     image: Taqi,
   },
   {
-    name: "Muhammad Abdullah",
-    role: "Software Engineer",
-    image: Abdullah,
+    name: "Muhammad Sharjeel",
+    role: "CMO and CFO",
+    image: Sharjeel,
+  },
+  {
+    name: "Ali Mustafa Zahid",
+    role: "CTO",
+    image: AliMustafa,
   },
 ];
 
