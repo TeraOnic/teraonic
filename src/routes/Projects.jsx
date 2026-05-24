@@ -15,17 +15,17 @@ import Newvative from "../assets/projects/Newvative.webp";
 import TShirtShop from "../assets/projects/TShirtShop.webp";
 
 const projectsData = [
-  { picture: TeraOnicMockup, title: "TeraOnic Website", category: "Web Development", caseStudyUrl: "/projects/teraonic-website", visitUrl: "https://teraonic.com" },
-  { picture: WingManDepo, title: "Fly Boys Depo", category: "Web Development", caseStudyUrl: "/projects/fly-boys-depo", visitUrl: "https://flyboysdepo.com" },
-  { picture: FreshBerryUAE, title: "Fresh Berry UAE", category: "UI/UX Design", caseStudyUrl: "/projects/fresh-berry-uae", visitUrl: "https://freshberryuae.com" },
-  { picture: HealthCare, title: "HealthCare Web", category: "UI/UX Design", caseStudyUrl: "/projects/healthcare-web", visitUrl: "https://healthcareweb.com" },
-  { picture: Newvative, title: "NewVative", category: "UI/UX Design", caseStudyUrl: "/projects/newvative", visitUrl: "https://newvative.com" },
-  { picture: TShirtShop, title: "T-Shirt Shop", category: "UI/UX Design", caseStudyUrl: "/projects/t-shirt-shop", visitUrl: "https://tshirtshop.com" },
-  { picture: AXEMockup, title: "AXE Website Redesign", category: "Re-Design", caseStudyUrl: "/projects/axe-website-redesign", visitUrl: "https://axeredesign.com" },
-  { picture: ShoesStore, title: "Shoes Store", category: "App Design", caseStudyUrl: "/projects/shoes-store", visitUrl: "https://shoesstoreapp.com" },
-  { picture: Coffee, title: "Coffee App", category: "Mobile App", caseStudyUrl: "/projects/coffee-app", visitUrl: "https://coffeeapp.com" },
-  { picture: AUTransport, title: "AU Transport System", category: "System App", caseStudyUrl: "/projects/au-transport-system", visitUrl: "https://autransport.com" },
-  { picture: AppSignup, title: "App Signup Flow", category: "UI Component", caseStudyUrl: "/projects/app-signup-flow", visitUrl: "https://signupflow.com" },
+  { title: "TeraOnic Website", category: "Web Development", caseStudyUrl: "/projects/teraonic-website", visitUrl: "https://teraonic.com" },
+  { title: "Fly Boys Depo", category: "Web Development", caseStudyUrl: "/projects/fly-boys-depo", visitUrl: "https://flyboysdepo.com" },
+  { title: "Fresh Berry UAE", category: "UI/UX Design", caseStudyUrl: "/projects/fresh-berry-uae", visitUrl: "https://freshberryuae.com" },
+  { title: "HealthCare Web", category: "UI/UX Design", caseStudyUrl: "/projects/healthcare-web", visitUrl: "https://healthcareweb.com" },
+  { title: "NewVative", category: "UI/UX Design", caseStudyUrl: "/projects/newvative", visitUrl: "https://newvative.com" },
+  { title: "T-Shirt Shop", category: "UI/UX Design", caseStudyUrl: "/projects/t-shirt-shop", visitUrl: "https://tshirtshop.com" },
+  { title: "AXE Website Redesign", category: "Re-Design", caseStudyUrl: "/projects/axe-website-redesign", visitUrl: "https://axeredesign.com" },
+  { title: "Shoes Store", category: "App Design", caseStudyUrl: "/projects/shoes-store", visitUrl: "https://shoesstoreapp.com" },
+  { title: "Coffee App", category: "Mobile App", caseStudyUrl: "/projects/coffee-app", visitUrl: "https://coffeeapp.com" },
+  { title: "AU Transport System", category: "System App", caseStudyUrl: "/projects/au-transport-system", visitUrl: "https://autransport.com" },
+  { title: "App Signup Flow", category: "UI Component", caseStudyUrl: "/projects/app-signup-flow", visitUrl: "https://signupflow.com" },
 ];
 
 export default function Projects() {

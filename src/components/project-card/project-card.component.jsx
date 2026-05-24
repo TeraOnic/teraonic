@@ -31,11 +31,12 @@ const CustomLink = ({ to, children, className, ...props }) => {
 };
 
 const ProjectCard = ({ picture, title, category, caseStudyUrl, visitUrl }) => {
-  const displayImage = picture || (visitUrl ? `https://api.microlink.io/?url=${encodeURIComponent(visitUrl)}&screenshot=true&embed=screenshot.url` : null);
+  const screenshotUrl = visitUrl ? `https://api.microlink.io/?url=${encodeURIComponent(visitUrl + (visitUrl.includes('?') ? '&' : '?') + 'v=1.0.1')}&screenshot=true&embed=screenshot.url` : null;
+  const displayImage = picture || screenshotUrl;
 
   return (
     <motion.div
-      className="relative min-w-[320px] md:min-w-[450px] h-[400px] md:h-[500px] rounded-3xl overflow-hidden cursor-pointer group border border-white/10 bg-black/20 backdrop-blur-3xl shadow-2xl"
+      className="relative min-w-[320px] sm:min-w-[450px] md:min-w-[600px] h-[220px] sm:h-[300px] md:h-[380px] rounded-3xl overflow-hidden cursor-pointer group border border-white/10 bg-black/20 backdrop-blur-3xl shadow-2xl"
       whileHover={{ y: -10 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
@@ -59,7 +60,7 @@ const ProjectCard = ({ picture, title, category, caseStudyUrl, visitUrl }) => {
           <motion.img
             src={displayImage}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
             loading="lazy"
           />
         ) : (
@@ -70,18 +71,18 @@ const ProjectCard = ({ picture, title, category, caseStudyUrl, visitUrl }) => {
       </div>
 
       {/* Content */}
-      <div className="absolute bottom-0 left-0 w-full p-8 transition-transform duration-500 ease-out transform max-md:-translate-y-14 md:translate-y-4 md:group-hover:-translate-y-16">
-        <span className="inline-block px-3 py-1 mb-3 text-xs font-medium tracking-wider text-white uppercase bg-primary/20 backdrop-blur-md rounded-full border border-white/10">
+      <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 transition-transform duration-500 ease-out transform max-md:-translate-y-12 md:translate-y-4 md:group-hover:-translate-y-16">
+        <span className="inline-block px-2.5 py-0.5 md:px-3 md:py-1 mb-2 md:mb-3 text-[10px] md:text-xs font-medium tracking-wider text-white uppercase bg-primary/20 backdrop-blur-md rounded-full border border-white/10">
           {category}
         </span>
-        <h3 className="text-3xl font-bold text-white mb-2 leading-tight">
+        <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight">
           {title}
         </h3>
         <div className="w-0 group-hover:w-full h-0.5 bg-secondary transition-all duration-500 ease-in-out"></div>
       </div>
 
       {/* macOS Dock */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 w-[92%] sm:w-auto max-w-max flex items-center justify-center gap-2.5 bg-white/10 backdrop-blur-xl border border-white/15 px-3 py-2.5 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 cubic-bezier(0.16, 1, 0.3, 1) transform max-md:translate-y-0 max-md:opacity-100 max-md:pointer-events-auto md:translate-y-10 md:opacity-0 md:pointer-events-none md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-hover:pointer-events-auto">
+      <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-30 w-[92%] sm:w-auto max-w-max flex items-center justify-center gap-2.5 bg-white/10 backdrop-blur-xl border border-white/15 px-3 py-2.5 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 cubic-bezier(0.16, 1, 0.3, 1) transform max-md:translate-y-0 max-md:opacity-100 max-md:pointer-events-auto md:translate-y-10 md:opacity-0 md:pointer-events-none md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-hover:pointer-events-auto">
         <CustomLink
           to={caseStudyUrl}
           className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white/90 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl transition-all duration-300 cursor-pointer whitespace-nowrap active:scale-95 shadow-inner"

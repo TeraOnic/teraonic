@@ -9,6 +9,11 @@ import JSIcon from "../../assets/tools-and-tech/JS.svg";
 import MongoDBIcon from "../../assets/tools-and-tech/MongoDB.svg";
 import MySqlIcon from "../../assets/tools-and-tech/MySql.svg";
 
+const isBot = typeof window !== "undefined" && (
+    /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex|headless|screenshot|microlink/i.test(window.navigator.userAgent) ||
+    window.navigator.webdriver
+);
+
 const ParallaxIcon = ({ icon, delay, x, y, size = "w-16", mouseX, mouseY, depth = 1 }) => {
     // Parallax movement based on mouse position
     const xMotion = useTransform(mouseX, [-0.5, 0.5], [-30 * depth, 30 * depth]);
@@ -19,12 +24,12 @@ const ParallaxIcon = ({ icon, delay, x, y, size = "w-16", mouseX, mouseY, depth 
 
     return (
         <motion.div
-            initial={{ opacity: 0, scale: 0 }}
+            initial={isBot ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
             animate={{
                 opacity: 1,
                 scale: 1,
                 // Keep the gentle floating animation
-                y: [0, -10, 0],
+                y: isBot ? 0 : [0, -10, 0],
             }}
             style={{
                 x: xSpring, // Apply parallax x
@@ -35,9 +40,9 @@ const ParallaxIcon = ({ icon, delay, x, y, size = "w-16", mouseX, mouseY, depth 
                 top: "50%",
             }}
             transition={{
-                opacity: { duration: 0.5, delay: delay * 0.2 },
-                scale: { duration: 0.5, delay: delay * 0.2 },
-                y: { duration: 3 + Math.random() * 2, repeat: Infinity, ease: "easeInOut", delay: Math.random() * 2 } // specific float
+                opacity: { duration: isBot ? 0 : 0.5, delay: isBot ? 0 : delay * 0.2 },
+                scale: { duration: isBot ? 0 : 0.5, delay: isBot ? 0 : delay * 0.2 },
+                y: isBot ? { duration: 0 } : { duration: 3 + Math.random() * 2, repeat: Infinity, ease: "easeInOut", delay: Math.random() * 2 } // specific float
             }}
             className={`absolute z-10`}
         >
@@ -77,12 +82,12 @@ const ScatteredIcon = ({ icon, x, y, size, mouseX, mouseY, depth }) => {
             }}
         >
             <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1, y: [0, -15, 0] }}
+                initial={isBot ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1, y: isBot ? 0 : [0, -15, 0] }}
                 transition={{
-                    opacity: { duration: 0.8, delay: Math.random() * 0.5 },
-                    scale: { duration: 0.8, delay: Math.random() * 0.5 },
-                    y: { duration: 3 + Math.random() * 2, repeat: Infinity, ease: "easeInOut", delay: Math.random() }
+                    opacity: { duration: isBot ? 0 : 0.8, delay: isBot ? 0 : Math.random() * 0.5 },
+                    scale: { duration: isBot ? 0 : 0.8, delay: isBot ? 0 : Math.random() * 0.5 },
+                    y: isBot ? { duration: 0 } : { duration: 3 + Math.random() * 2, repeat: Infinity, ease: "easeInOut", delay: Math.random() }
                 }}
                 className={`flex items-center justify-center ${size} p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-lg hover:shadow-secondary/30 transition-shadow -translate-x-1/2 -translate-y-1/2`}
                 whileHover={{ scale: 1.15, rotate: 5, zIndex: 50 }}
