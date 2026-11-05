@@ -64,7 +64,7 @@ const Location = () => {
                 </div>
                 <div>
                   <p className="font-bold text-primary">Email Us</p>
-                  <p className="text-sm text-gray-500">teraonic.info@gmail.com</p>
+                  <p className="text-sm text-gray-500">info@teraonic.com</p>
                 </div>
               </div>
             </div>

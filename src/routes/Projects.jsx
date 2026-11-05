@@ -16,7 +16,7 @@ import TShirtShop from "../assets/projects/TShirtShop.webp";
 
 const projectsData = [
   { title: "TeraOnic Website", category: "Web Development", caseStudyUrl: "/projects/teraonic-website", visitUrl: "https://teraonic.com" },
-  { title: "Fly Boys Depo", category: "Web Development", caseStudyUrl: "/projects/fly-boys-depo", visitUrl: "https://flyboysdepo.com" },
+  { title: "Fly Boys Depo", category: "Web Development", caseStudyUrl: "/projects/fly-boys-depo", visitUrl: "https://wingmandepot.us" },
   { title: "Fresh Berry UAE", category: "UI/UX Design", caseStudyUrl: "/projects/fresh-berry-uae", visitUrl: "https://freshberryuae.com" },
   { title: "HealthCare Web", category: "UI/UX Design", caseStudyUrl: "/projects/healthcare-web", visitUrl: "https://healthcareweb.com" },
   { title: "NewVative", category: "UI/UX Design", caseStudyUrl: "/projects/newvative", visitUrl: "https://newvative.com" },
