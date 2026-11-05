@@ -16,7 +16,7 @@ const ContactUs = () => {
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/teraonic.info@gmail.com",
+        "https://formsubmit.co/ajax/info@teraonic.com",
         {
           method: "POST",
           body: formData,
@@ -69,7 +69,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mb-1 group-hover:text-secondary transition-colors">Email Us</p>
-                    <p className="font-semibold text-sm md:text-base text-white group-hover:text-secondary transition-colors">teraonic.info@gmail.com</p>
+                    <p className="font-semibold text-sm md:text-base text-white group-hover:text-secondary transition-colors">info@teraonic.com</p>
                   </div>
                 </div>
 

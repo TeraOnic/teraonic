@@ -16,7 +16,7 @@ const BusinessCard = () => {
         </div>
         <div className="flex gap-2.5 mr-4">
           <img src="/gray-mail.svg" alt="" />
-          <p className="text-xs text-[#AEAEAE]">teraonic.info@gmail.com</p>
+          <p className="text-xs text-[#AEAEAE]">info@teraonic.com</p>
         </div>
       </div>
     </div>
