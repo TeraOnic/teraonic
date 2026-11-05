@@ -18,7 +18,7 @@ export default function Footer() {
           <a href="https://wa.me/923219747270" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-secondary transition-colors">
             <LuPhone />
           </a>
-          <a href="mailto:teraonic.info@gmail.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-secondary transition-colors">
+          <a href="mailto:info@teraonic.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-secondary transition-colors">
             <LuMail />
           </a>
           <a href="https://www.linkedin.com/company/teraonic-software-solutions/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-secondary transition-colors">
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="text-gray-500 text-center text-xs pb-5">
-        Copyright © 2025 Teraonic. All Rights Reserved.
+        Copyright © 2026 Teraonic. All Rights Reserved.
       </p>
     </nav>
   );
