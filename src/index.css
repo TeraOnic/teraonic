@@ -78,3 +78,10 @@ html {
     transform: translateX(-50%);
   }
 }
+
+/* Hide Elfsight Write Review button */
+[class*="elfsight-app"] [class*="write-review"],
+[class*="elfsight-app"] [class*="WriteReview"],
+[class*="elfsight-app"] a[href*="writereview"] {
+  display: none !important;
+}
