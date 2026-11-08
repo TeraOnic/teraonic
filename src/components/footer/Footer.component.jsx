@@ -3,8 +3,8 @@ import { LuPhone, LuMail, LuLinkedin } from "react-icons/lu";
 
 export default function Footer() {
   return (
-    <nav>
-      <div className="bg-[#D9D9D9] py-10 px-8 md:px-32 flex flex-col md:flex-row items-center font-poppins justify-between gap-8 md:gap-0">
+    <footer className="bg-[#D9D9D9]">
+      <div className="py-10 px-8 md:px-32 flex flex-col md:flex-row items-center font-poppins justify-between gap-8 md:gap-0">
         <div className="max-w-xl text-center md:text-left">
           <p className="text-m font-bold font-nura">TeraOnic</p>
           <p className="text-s mt-2 text-gray-600">Custom software, purpose-built for your challenges. We craft solutions that work — beautifully and reliably.</p>
@@ -26,9 +26,9 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <p className="text-gray-500 text-center text-xs pb-5">
+      <p className="text-gray-600 text-center text-xs pb-8">
         Copyright © 2026 Teraonic. All Rights Reserved.
       </p>
-    </nav>
+    </footer>
   );
 }
